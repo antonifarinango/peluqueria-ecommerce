@@ -1,0 +1,61 @@
+import { configureStore } from "@reduxjs/toolkit";
+import { productReducer } from "./ProductReducer";
+import { errorReducer } from "./errorReducer";
+import { cartReducer } from "./cartReducer";
+import { authReducer } from "./authReducer";
+import { paymentMethodReducer } from "./paymentMethodReducer";
+import { adminReducer } from "./adminReducer";
+import { orderReducer } from "./orderReducer";
+import { sellerReducer } from "./sellerReducer";
+import { dataUsuarioReducer } from "./DataUserReducer";
+
+const user = localStorage.getItem("auth")
+    ? JSON.parse(localStorage.getItem("auth"))
+    : null;
+
+const cartItems = localStorage.getItem("cartItems")
+    ? JSON.parse(localStorage.getItem("cartItems"))
+    : [];
+
+const selectedUserCheckoutAddress = localStorage.getItem("CHECKOUT_ADDRESS")
+    ? JSON.parse(localStorage.getItem("CHECKOUT_ADDRESS"))
+    : null;
+/* NECESARIO PARA IMPLEMENTAR STRIPE 
+const selectUserCheckoutAddress = localStorage.getItem("CHECKOUT_ADDRESS")
+    ? JSON.parse(localStorage.getItem("CHECKOUT_ADDRESS"))
+    : [];
+*/
+
+const initialTotalPrice = cartItems.reduce(
+    (acc, cur) => acc + Number(cur.specialPrice) * Number(cur.quantity),
+    0
+);
+
+const initialState = {
+    auth: { user: user, selectedUserCheckoutAddress },
+    /* NECESARIO PARA IMPLEMENTAR STRIPE
+    auth: { user: user, selectUserCheckoutAddress },
+    */
+    carts: { 
+        cart: cartItems, 
+        totalPrice: initialTotalPrice,
+        cartId: null 
+    },
+};
+
+export const store = configureStore({
+    reducer: {
+        products: productReducer,
+        errors: errorReducer,
+        carts: cartReducer,
+        auth: authReducer,
+        payment: paymentMethodReducer,
+        admin: adminReducer,
+        order: orderReducer,
+        seller: sellerReducer,
+        usuarios: dataUsuarioReducer
+    },
+    preloadedState: initialState,
+});
+
+export default store;

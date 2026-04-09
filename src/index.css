@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap') layer(base);
+
+@import 'tailwindcss';
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+
+  --color-surface-container-low: #f4f3f1;
+  --color-tertiary: #485e8b;
+  --color-secondary: #5f5e5e;
+  --color-outline: #7f7667;
+  --color-surface-container-highest: #e3e2e0;
+  --color-on-secondary-fixed-variant: #474746;
+  --color-primary: #775a19;
+  --color-primary-container: #c5a059;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #4e3700;
+  
+  --color-secondary: #5f5e5e;
+  --color-secondary-container: #e2dfde;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #636262;
+
+  --color-tertiary: #485e8b;
+  --color-tertiary-container: #8fa5d6;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #233a65;
+
+  --color-background: #faf9f7;
+  --color-on-background: #1a1c1b;
+
+  --color-surface: #faf9f7;
+  --color-on-surface: #1a1c1b;
+  --color-on-tertiary: #ffffff;
+  --color-surface-container-high: #e9e8e6;
+  --color-error-container: #ffdad6;
+  --color-on-primary-fixed: #261900;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
