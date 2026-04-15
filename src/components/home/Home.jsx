@@ -32,7 +32,7 @@ const Home = () => {
                     <img 
                       className="w-full h-full object-cover grayscale-[20%] contrast-[1.1]" 
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9_sjdDb_LgCLlVOPKpXJSOCa-joF033DlHlCeiN-1fiB8RJTyFYu03M3vce0mfqyVNYh9H-DzAPFtEpnFGNHtECrcvRZVX0-mwZ426x-D8-CM5LFZDbNuer0_isegh5lxLoC1sXAEx2FiCh7rWp0fgL_Y0QdqbsVeqLf23VHhKWi6QfW7aPx9WK3x81028jyglmhGMOephG4bFphQSgxZcNp7ZYXUckShoYCFlUfqAHZXSZHD6xhKDyLT5PrgDQwNApnJ40Xik9rv" 
-                      alt="Artistry in Every Strand"
+                      alt="Arte en cada fibra"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
                 </div>
@@ -43,16 +43,16 @@ const Home = () => {
                       variants={fadeIn}
                       className="flex flex-col gap-8 items-start"
                     >
-                        <span className="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold">ESTABLISHED 2024</span>
+                        <span className="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold">ESTABLECIDO EN 2024</span>
                         <h1 className="font-headline text-6xl md:text-8xl leading-[1.1] tracking-tight text-on-surface">
-                            Artistry in <br/><span className="serif-italic">Every Strand.</span>
+                            Arte en <br/><span className="serif-italic">Cada Fibra.</span>
                         </h1>
                         <p className="text-secondary text-lg max-w-md leading-relaxed font-body">
-                            A boutique sanctuary where editorial precision meets effortless beauty. We curate looks that define identities.
+                            Un santuario boutique donde la precisión editorial se encuentra con la belleza sin esfuerzo. Curamos looks que definen identidades.
                         </p>
                         <div className="flex gap-4 mt-4">
                             <Link to="/contact" className="bg-primary hover:bg-primary-container text-on-primary px-10 py-5 rounded-md transition-all duration-300 font-medium tracking-wide shadow-lg shadow-primary/20">
-                                BOOK YOUR SESSION
+                                RESERVA TU SESIÓN
                             </Link>
                         </div>
                     </motion.div>
@@ -64,11 +64,11 @@ const Home = () => {
                 <div className="max-w-screen-2xl mx-auto px-8">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
                         <div className="max-w-2xl">
-                            <h2 className="font-headline text-4xl md:text-5xl mb-6">Our Specializations</h2>
-                            <p className="text-secondary text-lg font-body">From architectural cuts to multidimensional color, our services are tailored to the unique texture and rhythm of your hair.</p>
+                            <h2 className="font-headline text-4xl md:text-5xl mb-6">Nuestras Especialidades</h2>
+                            <p className="text-secondary text-lg font-body">Desde cortes arquitectónicos hasta color multidimensional, nuestros servicios se adaptan a la textura y el ritmo único de tu cabello.</p>
                         </div>
                         <Link to="/products" className="text-primary font-medium flex items-center gap-2 border-b border-primary/20 pb-1 hover:border-primary transition-all font-label text-xs tracking-widest uppercase">
-                            VIEW FULL MENU <FiArrowRight size={14} />
+                            VER MENÚ COMPLETO <FiArrowRight size={14} />
                         </Link>
                     </div>
 
@@ -79,12 +79,12 @@ const Home = () => {
                           className="md:col-span-4 bg-surface-container-low p-10 rounded-xl group hover:bg-surface-container transition-colors duration-500"
                         >
                             <FiScissors className="text-4xl text-primary mb-8" />
-                            <h3 className="font-headline text-2xl mb-4">Precision Cuts</h3>
-                            <p className="text-secondary mb-8 font-body">Architectural shaping designed to grow out beautifully. Includes signature wash and blow-out.</p>
+                            <h3 className="font-headline text-2xl mb-4">Cortes de Precisión</h3>
+                            <p className="text-secondary mb-8 font-body">Modelado arquitectónico diseñado para crecer maravillosamente. Incluye lavado y secado de autor.</p>
                             <ul className="space-y-3 text-sm text-on-surface-variant font-medium font-label tracking-wide">
-                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-primary rounded-full"></span> Master Stylist Cut</li>
-                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-primary rounded-full"></span> Creative Transformation</li>
-                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-primary rounded-full"></span> Fringe & Face Framing</li>
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-primary rounded-full"></span> Corte Master Stylist</li>
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-primary rounded-full"></span> Transformación Creativa</li>
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-primary rounded-full"></span> Flequillo y Enmarcado Facial</li>
                             </ul>
                         </motion.div>
                         
@@ -93,11 +93,11 @@ const Home = () => {
                           initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}
                           className="md:col-span-5 relative overflow-hidden rounded-xl h-[450px] group"
                         >
-                            <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlArxI7bkptJgxIHUDkjkoxYmfaDds0L-zR3GfiqVyPsd8A-X12oBGvp6OMbNa-j8CkEcN8mb-0w1KvSQAzIN5grRs-KlNDKiKBQ5kwkQoLGDN4X4X-80oj6347_8YHoMt2vxazqZhZDm91_BqF26vYH9B2k1dGSyt5cp1lBvwE_46QoDpVVQYhtk5k60MshSZIkk0SjF2mS-J00VF74FsgLhx-HSVANjjaZTfQ_CnBAoN5P9QZze3V7fV1A8m5_7wyNLbfpHQLEne" alt="Editorial Color"/>
+                            <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlArxI7bkptJgxIHUDkjkoxYmfaDds0L-zR3GfiqVyPsd8A-X12oBGvp6OMbNa-j8CkEcN8mb-0w1KvSQAzIN5grRs-KlNDKiKBQ5kwkQoLGDN4X4X-80oj6347_8YHoMt2vxazqZhZDm91_BqF26vYH9B2k1dGSyt5cp1lBvwE_46QoDpVVQYhtk5k60MshSZIkk0SjF2mS-J00VF74FsgLhx-HSVANjjaZTfQ_CnBAoN5P9QZze3V7fV1A8m5_7wyNLbfpHQLEne" alt="Color Editorial"/>
                             <div className="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
                             <div className="absolute bottom-0 left-0 p-10 text-white">
-                                <h3 className="font-headline text-3xl mb-2">Editorial Color</h3>
-                                <p className="text-white/80 max-w-xs font-body">Bespoke balayage and corrective transformations.</p>
+                                <h3 className="font-headline text-3xl mb-2">Color Editorial</h3>
+                                <p className="text-white/80 max-w-xs font-body">Balayage a medida y transformaciones correctivas.</p>
                             </div>
                         </motion.div>
 
@@ -108,11 +108,11 @@ const Home = () => {
                         >
                             <div>
                                 <FiStar className="text-4xl mb-8 group-hover:rotate-12 transition-transform" />
-                                <h3 className="font-headline text-2xl mb-4">The Styling Suite</h3>
-                                <p className="text-on-primary/80 font-body">Red carpet waves, sleek silk presses, and avant-garde editorial styling.</p>
+                                <h3 className="font-headline text-2xl mb-4">La Suite de Peinado</h3>
+                                <p className="text-on-primary/80 font-body">Ondas de alfombra roja, alisados de seda y peinados editoriales de vanguardia.</p>
                             </div>
                             <button className="mt-8 border border-on-primary/30 py-3 rounded-lg hover:bg-on-primary hover:text-primary transition-all text-xs font-bold uppercase tracking-widest font-label">
-                                EXPLORE LOOKS
+                                EXPLORAR LOOKS
                             </button>
                         </motion.div>
                     </div>
@@ -131,23 +131,23 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="flex flex-col gap-8">
-                        <span className="font-label uppercase tracking-[0.2em] text-primary font-bold text-xs">OUR PHILOSOPHY</span>
-                        <h2 className="font-headline text-4xl md:text-5xl leading-tight">Beyond the Chair: <br/><span className="serif-italic">The Curated Experience.</span></h2>
+                        <span className="font-label uppercase tracking-[0.2em] text-primary font-bold text-xs">NUESTRA FILOSOFÍA</span>
+                        <h2 className="font-headline text-4xl md:text-5xl leading-tight">Más allá de la silla: <br/><span className="serif-italic">La Experiencia Curada.</span></h2>
                         <p className="text-secondary text-lg leading-relaxed font-body">
-                            At The Editorial Salon, we believe hair is the most intimate expression of personal brand. Founded by award-winning stylists, our space is designed to be a collaborative studio where vision meets technique.
+                            En The Editorial Salon, creemos que el cabello es la expresión más íntima de la marca personal. Fundado por estilistas galardonados, nuestro espacio está diseñado para ser un estudio colaborativo donde la visión se encuentra con la técnica.
                         </p>
                         <div className="grid grid-cols-2 gap-8 py-4">
                             <div>
                                 <p className="text-4xl font-headline text-primary tracking-tighter transition-all hover:scale-105">15+</p>
-                                <p className="text-[10px] uppercase tracking-widest text-secondary mt-1 font-label font-bold">Years Excellence</p>
+                                <p className="text-[10px] uppercase tracking-widest text-secondary mt-1 font-label font-bold">Años de Excelencia</p>
                             </div>
                             <div>
                                 <p className="text-4xl font-headline text-primary tracking-tighter transition-all hover:scale-105">100%</p>
-                                <p className="text-[10px] uppercase tracking-widest text-secondary mt-1 font-label font-bold">Bespoke Care</p>
+                                <p className="text-[10px] uppercase tracking-widest text-secondary mt-1 font-label font-bold">Cuidado a Medida</p>
                             </div>
                         </div>
                         <div className="p-6 bg-surface-container-highest/30 rounded-lg border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow">
-                            <p className="italic text-on-surface-variant font-medium font-body leading-relaxed">"We don't just follow trends; we edit them to fit your lifestyle."</p>
+                            <p className="italic text-on-surface-variant font-medium font-body leading-relaxed">"No solo seguimos tendencias; las editamos para que se adapten a tu estilo de vida."</p>
                         </div>
                     </div>
                 </div>
@@ -158,20 +158,20 @@ const Home = () => {
                 <div className="max-w-screen-2xl mx-auto px-8">
                     <div className="bg-surface-container-lowest p-12 md:p-20 rounded-2xl flex flex-col md:flex-row gap-12 items-center justify-between border border-outline-variant/10 shadow-sm transition-all hover:shadow-md">
                         <div className="max-w-xl text-center md:text-left">
-                            <h3 className="font-headline text-3xl mb-4 italic">Exclusive Apothecary</h3>
-                            <p className="text-secondary text-lg font-body leading-relaxed">Our curated collection of professional hair care is available exclusively in-store or via personalized WhatsApp consultation for local delivery.</p>
+                            <h3 className="font-headline text-3xl mb-4 italic">Boticario Exclusivo</h3>
+                            <p className="text-secondary text-lg font-body leading-relaxed">Nuestra colección curada de cuidado capilar profesional está disponible exclusivamente en tienda o mediante consulta personalizada por WhatsApp para entrega local.</p>
                         </div>
                         <div className="flex gap-4">
                             <a href="https://wa.me/yournumber" className="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold hover:opacity-90 transition-all shadow-lg shadow-green-200/50 hover:scale-105">
                                 <FiMessageSquare size={20} />
-                                SHOP VIA WHATSAPP
+                                COMPRAR POR WHATSAPP
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Booking Form Section */}
+            {/* Booking Form Section 
             <section className="py-32 bg-surface" id="book">
                 <div className="max-w-4xl mx-auto px-8">
                     <div className="text-center mb-16">
@@ -219,6 +219,7 @@ const Home = () => {
                     </form>
                 </div>
             </section>
+            */}
         </div>
     )
 }

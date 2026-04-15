@@ -33,32 +33,32 @@ const AddSellerForm = ({ setOpen }) => {
       <form className="space-y-4 " onSubmit={handleSubmit(addSellerHandler)}>
         <div className="flex  flex-col gap-4 w-full">
           <InputField
-            label="UserName"
+            label="Nombre de usuario"
             required
             id="username"
             type="text"
-            message="*UserName is required"
-            placeholder="Enter your username"
+            message="*El nombre de usuario es obligatorio"
+            placeholder="Ingresa tu nombre de usuario"
             register={register}
             errors={errors}
           />
           <InputField
-            label="Email"
+            label="Correo electrónico"
             required
             id="email"
             type="email"
-            message="*Email is required"
-            placeholder="Enter your email"
+            message="*El correo electrónico es obligatorio"
+            placeholder="Ingresa tu correo electrónico"
             register={register}
             errors={errors}
           />
           <InputField
-            label="Password"
+            label="Contraseña"
             required
             id="password"
             type="password"
-            message="*Password is required"
-            placeholder="Enter your password"
+            message="*La contraseña es obligatoria"
+            placeholder="Ingresa tu contraseña"
             register={register}
             errors={errors}
           />
@@ -71,7 +71,7 @@ const AddSellerForm = ({ setOpen }) => {
             type="button"
             className={`border border-blue-500 rounded-[5px] font-metropolis  text-textColor py-[10px] px-4 text-sm font-medium`}
           >
-            Cancel
+            Cancelar
           </button>
           <button
             disabled={loader}
@@ -80,10 +80,10 @@ const AddSellerForm = ({ setOpen }) => {
           >
             {loader ? (
               <div className="flex gap-2 items-center">
-                <Spinners /> Loading..
+                <Spinners /> Cargando...
               </div>
             ) : (
-              "Add New Seller"
+              "Agregar Nuevo Vendedor"
             )}
           </button>
         </div>

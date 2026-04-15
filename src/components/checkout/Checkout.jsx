@@ -32,7 +32,7 @@ const Checkout = () => {
 
     const handleNext = () => {
         if (activeStep === 0 && !selectedUserCheckoutAddress) {
-            toast.error("Please select checkout address before proceeding.");
+            toast.error("Por favor, selecciona una dirección de envío antes de continuar.");
             return;
         }
 
@@ -43,7 +43,7 @@ const Checkout = () => {
         }
 */
         if (activeStep === 1 && (!nombreUsuario || !telefonoUsuario)) {
-            toast.error("Please select payment address before proceeding.");
+            toast.error("Por favor, selecciona una dirección de pago antes de continuar.");
             return;
         }
         setActiveStep((prevStep) => prevStep + 1);
@@ -129,7 +129,7 @@ const Checkout = () => {
                     variant='outlined'
                     disabled={activeStep === 0}
                     onClick={handleBack}>
-                    Back
+                    Atrás
                 </Button>
 
                 {/* //METODO PARA PAGOS CON STRIPE 
@@ -180,7 +180,7 @@ const Checkout = () => {
                                 : ""
                             }`}
                         onClick={handleNext}>
-                        Proceed
+                        Continuar
                     </button>
 
 

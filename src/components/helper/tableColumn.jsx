@@ -19,7 +19,7 @@ export const adminProductTableColumn = (
       editable: false,
       headerClassName: "text-black font-semibold border",
       cellClassName: "text-slate-700 font-normal border",
-      renderHeader: (params) => <span className="text-center">ProductID</span>,
+      renderHeader: (params) => <span className="text-center">ID del Producto</span>,
     },
     {
       disableColumnMenu: true,
@@ -32,7 +32,7 @@ export const adminProductTableColumn = (
       headerAlign: "center",
       headerClassName: "text-black font-semibold text-center border ",
       cellClassName: "text-slate-700 font-normal border text-center",
-      renderHeader: (params) => <span>Product Name</span>,
+      renderHeader: (params) => <span>Nombre del Producto</span>,
     },
 
     {
@@ -45,7 +45,7 @@ export const adminProductTableColumn = (
       editable: false,
       headerClassName: "text-black font-semibold border",
       cellClassName: "text-slate-700 font-normal border",
-      renderHeader: (params) => <span className="text-center">Price</span>,
+      renderHeader: (params) => <span className="text-center">Precio</span>,
     },
     {
       disableColumnMenu: true,
@@ -57,7 +57,7 @@ export const adminProductTableColumn = (
       editable: false,
       headerClassName: "text-black font-semibold border",
       cellClassName: "text-slate-700 font-normal border",
-      renderHeader: (params) => <span className="text-center">Quantity</span>,
+      renderHeader: (params) => <span className="text-center">Cantidad</span>,
     },
     {
       disableColumnMenu: true,
@@ -70,7 +70,7 @@ export const adminProductTableColumn = (
       headerClassName: "text-black font-semibold border",
       cellClassName: "text-slate-700 font-normal border",
       renderHeader: (params) => (
-        <span className="text-center">Special Price</span>
+        <span className="text-center">Precio Especial</span>
       ),
     },
     {
@@ -84,7 +84,7 @@ export const adminProductTableColumn = (
       disableColumnMenu: true,
       headerClassName: "text-black font-semibold border ",
       cellClassName: "text-slate-700 font-normal border",
-      renderHeader: (params) => <span className="ps-10">Description</span>,
+      renderHeader: (params) => <span className="ps-10">Descripción</span>,
     },
     {
       sortable: false,
@@ -97,7 +97,7 @@ export const adminProductTableColumn = (
       disableColumnMenu: true,
       headerClassName: "text-black font-semibold border ",
       cellClassName: "text-slate-700 font-normal border",
-      renderHeader: (params) => <span className="ps-10">Image</span>,
+      renderHeader: (params) => <span className="ps-10">Imagen</span>,
       renderCell: (params) => (
         <div className="flex justify-center items-center h-full">
           {params.value ? (
@@ -124,7 +124,7 @@ export const adminProductTableColumn = (
       cellClassName: "text-slate-700 font-normal",
       sortable: false,
       width: 400,
-      renderHeader: (params) => <span>Action</span>,
+      renderHeader: (params) => <span>Acción</span>,
       renderCell: (params) => {
         return (
           <div className="flex justify-center items-center space-x-2 h-full pt-2">
@@ -133,14 +133,14 @@ export const adminProductTableColumn = (
               className="flex items-center bg-green-500 hover:bg-green-600 text-white px-4 h-9 rounded-md"
             >
               <FaImage className="mr-2" />
-              Image
+              Imagen
             </button>
             <button
               onClick={() => handleEdit(params.row)}
               className="flex items-center bg-blue-500 text-white px-4 h-9 rounded-md "
             >
               <FaEdit className="mr-2" />
-              Edit
+              Editar
             </button>
 
             <button
@@ -148,14 +148,14 @@ export const adminProductTableColumn = (
               className="flex items-center bg-red-500 text-white px-4   h-9 rounded-md"
             >
               <FaTrashAlt className="mr-2" />
-              Delete
+              Eliminar
             </button>
             <button
               onClick={() => handleProductView(params.row)}
               className="flex items-center bg-slate-800 text-white px-4   h-9 rounded-md"
             >
               <FaEye className="mr-2" />
-              View
+              Ver
             </button>
           </div>
         );
@@ -175,7 +175,7 @@ export const adminOrderTableColumn = (handleEdit, handleViewPdf) => [
     editable: false,
     headerClassName: "text-black font-semibold border",
     cellClassName: "text-slate-700 font-normal border",
-    renderHeader: (params) => <span className='text-center'>Order ID</span>
+    renderHeader: (params) => <span className='text-center'>ID del Pedido</span>
   },
   {
     // Column for customer email.
@@ -203,7 +203,7 @@ export const adminOrderTableColumn = (handleEdit, handleViewPdf) => [
     headerAlign: "center",
     headerClassName: "text-black font-semibold text-center border ",
     cellClassName: "text-slate-700 font-normal border text-center",
-    renderHeader: (params) => <span>Total Amount</span>,
+    renderHeader: (params) => <span>Monto Total</span>,
   },
   {
     // Column to display order status (e.g., Pending, Shipped).
@@ -217,7 +217,7 @@ export const adminOrderTableColumn = (handleEdit, handleViewPdf) => [
     headerAlign: "center",
     headerClassName: "text-black font-semibold text-center border ",
     cellClassName: "text-slate-700 font-normal border text-center",
-    renderHeader: (params) => <span>Status</span>,
+    renderHeader: (params) => <span>Estado</span>,
   },
   {
     // Column for order creation date.
@@ -231,7 +231,7 @@ export const adminOrderTableColumn = (handleEdit, handleViewPdf) => [
     headerAlign: "center",
     headerClassName: "text-black font-semibold text-center border ",
     cellClassName: "text-slate-700 font-normal border text-center",
-    renderHeader: (params) => <span>Order Date</span>,
+    renderHeader: (params) => <span>Fecha del Pedido</span>,
   },
   // Column for order creation date.
   {
@@ -271,7 +271,7 @@ export const adminOrderTableColumn = (handleEdit, handleViewPdf) => [
     cellClassName: "text-slate-700 font-normal",
     sortable: false,
     width: 250,
-    renderHeader: (params) => <span>Action</span>,
+    renderHeader: (params) => <span>Acción</span>,
     renderCell: (params) => {
       return (
         <div className='flex justify-center items-center space-x-2 h-full pt-2'>
@@ -285,7 +285,7 @@ export const adminOrderTableColumn = (handleEdit, handleViewPdf) => [
             onClick={() => handleEdit(params.row)}
             className='flex items-center bg-blue-500 hover:bg-blue-600 text-white px-3 h-9 rounded-md text-sm cursor-pointer'>
             <FaEdit className='mr-1' />
-            Edit
+            Editar
           </button>
         </div>
       );
@@ -307,7 +307,7 @@ export const categoryTableColumns = (handleEdit, handleDelete) => [
     editable: false,
     headerClassName: "text-black font-semibold border",
     cellClassName: "text-slate-700 font-normal border",
-    renderHeader: (params) => <span className="text-center">CategoryId</span>,
+    renderHeader: (params) => <span className="text-center">ID de Categoría</span>,
   },
   {
     disableColumnMenu: true,
@@ -320,7 +320,7 @@ export const categoryTableColumns = (handleEdit, handleDelete) => [
     headerAlign: "center",
     headerClassName: "text-black font-semibold text-center border ",
     cellClassName: "text-slate-700 font-normal border text-center",
-    renderHeader: (params) => <span>Category Name</span>,
+    renderHeader: (params) => <span>Nombre de Categoría</span>,
   },
 
   {
@@ -332,7 +332,7 @@ export const categoryTableColumns = (handleEdit, handleDelete) => [
     cellClassName: "text-slate-700 font-normal",
     sortable: false,
     width: 400,
-    renderHeader: (params) => <span>Action</span>,
+    renderHeader: (params) => <span>Acción</span>,
     renderCell: (params) => {
       return (
         <div className="flex justify-center space-x-2 h-full pt-2">
@@ -341,7 +341,7 @@ export const categoryTableColumns = (handleEdit, handleDelete) => [
             className="flex items-center bg-blue-500 text-white px-4 h-9 rounded-md "
           >
             <FaEdit className="mr-2" />
-            Edit
+            Editar
           </button>
 
           {/* Delete Button */}
@@ -350,7 +350,7 @@ export const categoryTableColumns = (handleEdit, handleDelete) => [
             className="flex items-center bg-red-500 text-white px-4   h-9 rounded-md"
           >
             <FaTrashAlt className="mr-2" />
-            Delete
+            Eliminar
           </button>
         </div>
       );
@@ -372,7 +372,7 @@ export const sellerTableColumns = [
 
     headerClassName: "text-black font-semibold border",
     cellClassName: "text-slate-700 font-normal border",
-    renderHeader: (params) => <span className="text-center">SellerID</span>,
+    renderHeader: (params) => <span className="text-center">ID del Vendedor</span>,
   },
   {
     disableColumnMenu: true,
@@ -385,7 +385,7 @@ export const sellerTableColumns = [
     sortable: false,
     headerClassName: "text-black font-semibold border",
     cellClassName: "text-slate-700 font-normal border",
-    renderHeader: (params) => <span className="text-center">UserName</span>,
+    renderHeader: (params) => <span className="text-center">Nombre de Usuario</span>,
   },
   {
     disableColumnMenu: true,

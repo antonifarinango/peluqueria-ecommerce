@@ -155,9 +155,6 @@ Quedo atento a la confirmación 👍
             handleWhatsApp();
         }
     };
-    useEffect(() => {
-        console.log(cartConsole)
-    }, [cartConsole])
 
     newCart.totalPrice = cart?.reduce(
         (acc, cur) => acc + Number(cur?.specialPrice) * Number(cur?.quantity), 0
@@ -192,7 +189,7 @@ Quedo atento a la confirmación 👍
 
                     <div className="flex items-center gap-4 p-4 rounded-xl bg-blue-50 border border-blue-100 dark:border-blue-800 mt-4">
                         <FiInfo size={20} className="text-blue-500" />
-                        <p className="text-slate-700  text-sm font-medium">Your shopping cart is ready. Taxes and shipping will be calculated at checkout.</p>
+                        <p className="text-slate-700  text-sm font-medium">Tu carrito está listo. Los impuestos y el envío se calcularán en el pago.</p>
                     </div>
                 </div>
 

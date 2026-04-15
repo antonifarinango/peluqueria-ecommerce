@@ -74,7 +74,6 @@ const ConfirmarOrden = () => {
         */
 
         // PARA ORDENES SIN STRIPE 
-        // console.log("Enviando orden:", sendData);
         setLoading(true);
         // PARA ORDENES SIN STRIPE - Reutilización del endpoint de pagos online
         dispatch(stripePaymentConfirmation(sendData, setErrorMessage, setLoading, toast));

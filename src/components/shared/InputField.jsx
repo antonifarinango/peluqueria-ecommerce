@@ -32,18 +32,18 @@ const InputField = ({
                 {...register(id, {
                     required: {value: required, message},
                     minLength: min
-                        ? { value: min, message: `Minimum ${min} character is required`}
+                        ? { value: min, message: `Se requieren al menos ${min} caracteres`}
                         : null,
                     pattern:
                         type === "email"
                             ? {
                                 value: /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+com+$/,
-                                message: "Invalid email"
+                                message: "Correo electrónico inválido"
                             }
                             : type === "url"
                             ? {
                                 value: /^(https?:\/\/)?(([a-zA-Z0-9\u00a1-\uffff-]+\.)+[a-zA-Z\u00a1-\uffff]{2,})(:\d{2,5})?(\/[^\s]*)?$/,
-                                message: "Please enter a valid url"
+                                message: "Por favor, ingresa una URL válida"
                             }
                             : null,
 

@@ -100,7 +100,7 @@ const onDeleteHandler = () => {
           onClick={() => setOpenAddModal(true)}
           className='bg-custom-blue hover:bg-blue-800 text-white font-semibold py-2 px-4 flex items-center gap-2 rounded-md shadow-md transition-colors hover:text-slate-300 duration-300'>
           <MdAddShoppingCart className='text-xl' />
-          Add Product
+          Agregar Producto
         </button>
       </div>
 
@@ -117,7 +117,7 @@ const onDeleteHandler = () => {
         <div className='flex flex-col items-center justify-center text-gray-600 py-10'>
           <FaBoxOpen size={50} className='mb-3'/>
           <h2 className='text-2xl font-semibold'>
-            No products created yet  
+            Aún no se han creado productos  
           </h2>
         </div>
       ) : (
@@ -159,7 +159,7 @@ const onDeleteHandler = () => {
     <Modal
       open={openUpdateModal || openAddModal}
       setOpen={openUpdateModal ? setOpenUpdateModal : setOpenAddModal}
-      title={openUpdateModal ? "Update Product" : "Add Product"}>
+      title={openUpdateModal ? "Actualizar Producto" : "Agregar Producto"}>
         <AddProductForm 
           setOpen={openUpdateModal ? setOpenUpdateModal : setOpenAddModal}
           product={selectedProduct}
@@ -171,7 +171,7 @@ const onDeleteHandler = () => {
     <Modal
       open={openImageUploadModal}
       setOpen={setOpenImageUploadModal}
-      title="Add Product Image">
+      title="Cargar Imagen del Producto">
         <ImageUploadForm 
           setOpen={setOpenImageUploadModal}
           product={selectedProduct}
@@ -183,7 +183,7 @@ const onDeleteHandler = () => {
       open={openDeleteModal}
       setOpen={setOpenDeleteModal}
       loader={loader}
-      title="Delete Product"
+      title="Eliminar Producto"
       onDeleteHandler={onDeleteHandler} />
 
       <ProductViewModal 

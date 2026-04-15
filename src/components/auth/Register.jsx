@@ -23,7 +23,6 @@ const Register = () => {
     });
 
     const registerHandler = async (data) => {
-        console.log("Register Click");
         dispatch(registerNewUser(data, toast, reset, navigate, setLoader));
      };
 
@@ -35,7 +34,7 @@ const Register = () => {
                     <div className="flex flex-col items-center justify-center space-y-4">
                         <FaUserPlus className="text-slate-800 text-5xl"/>
                         <h1 className="text-slate-800 text-center font-montserrat lg:text-3xl text-2xl font-bold">
-                            Register Here
+                            Crear Cuenta
                         </h1>
                     </div>
             <hr className="mt-2 mb-5 text-black" />
@@ -45,8 +44,8 @@ const Register = () => {
                     required
                     id="username"
                     type="text"
-                    message="*UserName is required"
-                    placeholder="Enter your username"
+                    message="*El nombre de usuario es obligatorio"
+                    placeholder="Ingresa tu nombre de usuario"
                     register={register}
                     errors={errors}
                     />
@@ -57,8 +56,8 @@ const Register = () => {
                     id="password"
                     min={6}
                     type="password"
-                    message="*Password is required"
-                    placeholder="Enter your password"
+                    message="*La contraseña es obligatoria"
+                    placeholder="Ingresa tu contraseña"
                     register={register}
                     errors={errors}
                     />
@@ -68,8 +67,8 @@ const Register = () => {
                     required
                     id="email"
                     type="email"
-                    message="*Email is required"
-                    placeholder="Enter your email"
+                    message="*El correo electrónico es obligatorio"
+                    placeholder="Ingresa tu correo electrónico"
                     register={register}
                     errors={errors}
                     />
@@ -81,19 +80,19 @@ const Register = () => {
                 type="submit">
                 {loader ? (
                     <>
-                    <Spinners /> Loading...
+                    <Spinners /> Cargando...
                     </>
                 ) : (
-                    <>Register</>
+                    <>Registrarse</>
                 )}
             </button>
 
             <p className="text-center text-sm text-slate-700 mt-6">
-              Already have an account?
+              ¿Ya tienes una cuenta?
               <Link
                 className="font-semibold underline hover:text-black"
                 to="/login">
-              <span> Login</span></Link>  
+              <span> Inicia sesión</span></Link>  
             </p>
             </form>
         </div>

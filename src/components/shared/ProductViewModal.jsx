@@ -42,7 +42,7 @@ function ProductViewModal({ open, setOpen, product, isAvailable }) {
             {/* Right: Content Area */}
             <div className="md:w-1/2 p-8 md:p-12 flex flex-col relative">
               <div className="mb-2">
-                 <span className="label-sm uppercase tracking-[0.2em] text-primary font-bold text-[10px]">APOTHECARY COLLECTION</span>
+                 <span className="label-sm uppercase tracking-[0.2em] text-primary font-bold text-[10px]">COLECCIÓN DE BOTICARIO</span>
               </div>
               
               <DialogTitle as="h1" className="font-headline text-3xl md:text-5xl text-on-surface mb-6 leading-tight">
@@ -69,14 +69,14 @@ function ProductViewModal({ open, setOpen, product, isAvailable }) {
 
                 {isAvailable ? (
                   <Status
-                    text="Available"
+                    text="Disponible"
                     icon={MdDone}
                     bg="bg-primary/10"
                     color="text-primary"
                   />
                 ) : (
                   <Status
-                    text="Out of Stock"
+                    text="Agotado"
                     icon={MdClose}
                     bg="bg-rose-100"
                     color="text-rose-700"
@@ -85,15 +85,15 @@ function ProductViewModal({ open, setOpen, product, isAvailable }) {
               </div>
 
               <div className="flex-1">
-                <h4 className="text-[10px] uppercase tracking-widest font-bold text-outline mb-3 Manrope">Product Note</h4>
+                <h4 className="text-[10px] uppercase tracking-widest font-bold text-outline mb-3 Manrope">Nota del Producto</h4>
                 <p className="text-secondary font-body leading-relaxed text-lg">
                   {description}
                 </p>
                 
                 <ul className="mt-8 space-y-3 font-body text-sm text-on-surface-variant italic opacity-80">
-                  <li>• Dermatologist tested</li>
-                  <li>• Sustainable packaging</li>
-                  <li>• Paraben and sulfate free</li>
+                  <li>• Probado dermatológicamente</li>
+                  <li>• Empaque sostenible</li>
+                  <li>• Libre de parabenos y sulfatos</li>
                 </ul>
               </div>
 
@@ -102,7 +102,7 @@ function ProductViewModal({ open, setOpen, product, isAvailable }) {
                    onClick={() => setOpen(false)}
                    className="flex-1 bg-on-surface text-surface py-5 rounded-sm font-bold tracking-[0.2em] text-xs uppercase hover:opacity-90 transition-all shadow-lg"
                  >
-                   Return to Archive
+                   Volver al catálogo
                  </button>
               </div>
             </div>

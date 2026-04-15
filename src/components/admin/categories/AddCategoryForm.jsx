@@ -47,12 +47,12 @@ const AddCategoryForm = ({ setOpen, open, category, update = false }) => {
       >
         <div className="flex md:flex-row flex-col gap-4 w-full ">
           <InputField
-            label="Category Name"
+            label="Nombre de la Categoría"
             required
             id="categoryName"
             type="text"
-            message="This field is required*"
-            placeholder="Category Name"
+            message="Este campo es obligatorio*"
+            placeholder="Nombre de la Categoría"
             register={register}
             errors={errors}
           />
@@ -63,16 +63,16 @@ const AddCategoryForm = ({ setOpen, open, category, update = false }) => {
             disabled={open}
             onClick={() => setOpen(false)}
             type="button"
-            className={`border border-borderColor rounded-[5px] font-metropolis  text-textColor py-[10px] px-4 text-sm font-medium`}
+            className={`border border-borderColor bg-red-800 rounded-[5px] font-metropolis  text-white py-[10px] px-4 text-sm font-medium`}
           >
-            Cancel
+            Cancelar
           </button>
           <button
             disabled={open}
             type="submit"
-            className={`font-metropolis rounded-[5px]  bg-custom-blue hover:bg-blue-800 text-white  py-[10px] px-4 text-sm font-medium`}
+            className={`rounded-[5px] bg-tertiary hover:bg-blue-800 text-white py-[10px] px-4 text-sm font-medium`}
           >
-            {open ? "Loading.." : update ? "Update" : "Save"}
+            {open ? "Cargando..." : update ? "Actualizar" : "Guardar"}
           </button>
         </div>
       </form>

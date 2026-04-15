@@ -18,7 +18,7 @@ const Sidebar = ({isProfileLayout = false}) => {
         <div className='flex h-16 shrink-0 gap-x-3 pt-2'>
             <FaTachometerAlt className='h-8 w-8 text-indigo-500'/>
             <h1 className='text-white text-xl font-bold'>
-                {isAdmin ? "Admin Panel" : "Seller Panel"}
+                {isAdmin ? "Panel Admin" : "Panel Vendedor"}
             </h1>
         </div>
         <nav className='flex flex-1 flex-col'>

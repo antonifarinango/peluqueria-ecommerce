@@ -28,7 +28,7 @@ export const bannerLists = [
 
 export const adminNavigation = [
   {
-    name: "Dashboard", 
+    name: "Panel de control", 
     href: "/admin", 
     icon: FaHome, 
     current: true 

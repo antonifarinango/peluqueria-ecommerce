@@ -29,7 +29,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-surface/80 backdrop-blur-md py-4 shadow-sm" : "bg-transparent py-6"}`}>
+        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-surface/80 py-4 shadow-sm" : "bg-transparent py-6"}`}>
             <div className="flex justify-between items-center px-8 md:px-12 max-w-screen-2xl mx-auto">
                 {/* Logo */}
                 <Link to="/" className="text-2xl font-headline italic text-zinc-900 tracking-tight">
@@ -98,12 +98,11 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Navigation Sidebar */}
-            <div className={`fixed inset-y-0 right-0 w-full max-w-xs bg-surface shadow-2xl z-50 transform transition-transform duration-500 ease-in-out md:hidden ${navbarOpen ? "translate-x-0" : "translate-x-full"}`}>
+            <div className={`fixed  inset-y-0 right-0 w-full max-w-xs bg-surface shadow-2xl z-50 transform transition-transform duration-500 ease-in-out md:hidden ${navbarOpen ? "translate-x-0" : "translate-x-full"}`}>
                 <div className="flex flex-col h-full p-8 pt-20">
                     <button onClick={() => setNavbarOpen(false)} className="absolute top-6 right-8 text-primary">
                         <FiX size={28} />
                     </button>
-                    
                     <div className="flex flex-col gap-8">
                         {navLinks.map((link) => (
                             <Link
@@ -133,6 +132,7 @@ const Navbar = () => {
                     className="fixed inset-0 bg-on-background/20 backdrop-blur-sm z-40 md:hidden"
                     onClick={() => setNavbarOpen(false)}
                 />
+                
             )}
         </nav>
     );

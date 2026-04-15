@@ -77,12 +77,12 @@ const Category = () => {
           className="bg-custom-blue hover:bg-blue-800 text-white font-semibold py-2 px-4 flex items-center gap-2 rounded-md shadow-md transition-colors hover:text-slate-300 duration-300"
         >
           <FaThList className="text-xl" />
-          Add Category
+          Agregar Categoría
         </button>
       </div>
       {!emptyCategories && (
         <h1 className="text-slate-800 text-3xl text-center font-bold pb-6 uppercase">
-          All Categories
+          Todas las Categorías
         </h1>
       )}
 
@@ -94,7 +94,7 @@ const Category = () => {
             <div className="flex flex-col items-center justify-center text-gray-600 py-10">
               <FaFolderOpen size={50} className="mb-3" />
               <h2 className="text-2xl font-semibold">
-                No Categories Created Yet
+                Aún no se han creado categorías
               </h2>
             </div>
           ) : (
@@ -132,7 +132,7 @@ const Category = () => {
       <Modal
         open={openUpdateModal || openModal}
         setOpen={openUpdateModal ? setOpenUpdateModal : setOpenModal}
-        title={openUpdateModal ? "Update Category" : "Add Category"}
+        title={openUpdateModal ? "Actualizar Categoría" : "Agregar Categoría"}
       >
         <AddCategoryForm
           setOpen={openUpdateModal ? setOpenUpdateModal : setOpenModal}
@@ -146,7 +146,7 @@ const Category = () => {
         open={openDeleteModal}
         loader={categoryLoader}
         setOpen={setOpenDeleteModal}
-        title="Are you want to delete this category"
+        title="¿Estás seguro de que quieres eliminar esta categoría?"
         onDeleteHandler={onDeleteHandler}
       />
     </div>

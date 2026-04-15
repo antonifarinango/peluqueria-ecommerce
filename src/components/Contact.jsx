@@ -9,13 +9,13 @@ const Contact = () => {
             <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg">
                 <h1 className="text-4xl font-bold text-center mb-6">Contáctanos</h1>
                 <p className="text-gray-600 text-center mb-4">
-                    We would love to hear from you! Please fill out the form below or contact us directly
+                    ¡Nos encantaría saber de ti! Por favor, completa el formulario a continuación o contáctanos directamente.
                 </p>
 
                 <form className="space-y-4">
                     <div>
                         <label className="block text-sm font-medium text-gray-700">
-                            Name
+                            Nombre
                         </label>
                         <input 
                             type="text"
@@ -26,7 +26,7 @@ const Contact = () => {
 
                     <div>
                         <label className="block text-sm font-medium text-gray-700">
-                            Email
+                            Correo electrónico
                         </label>
                         <input 
                             type="email"
@@ -36,7 +36,7 @@ const Contact = () => {
 
                     <div>
                         <label className="block text-sm font-medium text-gray-700">
-                            Message
+                            Mensaje
                         </label>
                         <textarea 
                             rows="4"
@@ -45,12 +45,12 @@ const Contact = () => {
                     </div>
 
                     <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">
-                        Send Message
+                        Enviar Mensaje
                     </button>
                 </form>
 
                 <div className="mt-8 text-center">
-                    <h2 className="text-lg font-semibold">Contact Information</h2>
+                    <h2 className="text-lg font-semibold">Información de Contacto</h2>
                     <div className="flex flex-col items-center space-y-2 mt-4">
                         <div className="flex items-center">
                             <FaPhone className="text-blue-500 mr-2"/>

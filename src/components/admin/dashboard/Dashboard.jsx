@@ -32,19 +32,19 @@ const Dashboard = () => {
           border border-slate-400 rounded-lg bg-linear-to-r
            from-blue-50 to-blue-100 shadow-lg'>
             <DashboardOverview 
-              title="Total Products"
+              title="Total de Productos"
               amount={productCount}
               Icon={FaBoxOpen}
             />
 
             <DashboardOverview 
-              title="Total Orders"
+              title="Total de Órdenes"
               amount={totalOrders}
               Icon={FaShoppingCart}
             />
 
             <DashboardOverview 
-              title="Total Revenue"
+              title="Ingresos Totales"
               amount={totalRevenue}
               Icon={FaDollarSign}
               revenue

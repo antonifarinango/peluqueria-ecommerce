@@ -18,19 +18,19 @@ const Services = () => {
               initial="hidden" animate="visible" variants={fadeIn}
               className="font-label text-xs tracking-widest uppercase text-primary mb-6 block font-bold"
             >
-              Curated Excellence
+              Excelencia Curada
             </motion.span>
             <motion.h1 
               initial="hidden" animate="visible" variants={fadeIn}
               className="text-6xl md:text-8xl font-headline text-on-surface leading-none tracking-tighter mb-8"
             >
-              Service Menu
+              Menú de Servicios
             </motion.h1>
             <motion.p 
               initial="hidden" animate="visible" variants={fadeIn}
               className="text-xl text-secondary leading-relaxed max-w-lg font-body"
             >
-              Artistry meets precision. We treat every head of hair as a bespoke canvas, blending contemporary technique with timeless elegance.
+              El arte se une a la precisión. Tratamos cada cabello como un lienzo a medida, combinando técnica contemporánea con elegancia atemporal.
             </motion.p>
           </div>
           <div className="hidden md:block">
@@ -65,17 +65,17 @@ const Services = () => {
           <div className="md:col-span-5 md:pl-12">
             <div className="space-y-8">
               <div>
-                <span className="text-primary font-label text-xs tracking-[0.2em] uppercase mb-4 block font-bold">Signature Technique</span>
-                <h2 className="text-5xl font-headline mb-6 text-on-surface leading-tight">Editorial Balayage</h2>
+                <span className="text-primary font-label text-xs tracking-[0.2em] uppercase mb-4 block font-bold">Técnica de Autor</span>
+                <h2 className="text-5xl font-headline mb-6 text-on-surface leading-tight">Balayage Editorial</h2>
                 <p className="text-secondary leading-relaxed mb-8 font-body text-lg">
-                  Our signature freehand painting technique designed to mimic the natural brightening effects of the sun. Includes a bespoke gloss treatment and a luxury blowout.
+                  Nuestra técnica de pintura a mano alzada diseñada para imitar los efectos naturales de aclarado del sol. Incluye un tratamiento de brillo a medida y un secado de lujo.
                 </p>
                 <div className="flex items-baseline gap-4 mb-10 border-b border-outline-variant/30 pb-6 w-fit">
-                  <span className="text-xs font-label uppercase text-secondary font-bold tracking-widest">Starting From</span>
+                  <span className="text-xs font-label uppercase text-secondary font-bold tracking-widest">Desde</span>
                   <span className="text-4xl font-headline text-primary tracking-tighter">$320</span>
                 </div>
                 <Link to="/contact" className="inline-block px-12 py-5 bg-primary text-on-primary hover:bg-primary-container transition-all duration-300 font-label text-xs tracking-widest uppercase font-bold rounded-md shadow-xl shadow-primary/20">
-                  Reserve Experience
+                  Reservar Experiencia
                 </Link>
               </div>
             </div>
@@ -92,12 +92,12 @@ const Services = () => {
             <div className="space-y-12">
               <div className="border-b border-outline-variant/30 pb-6 flex items-center gap-4">
                 <FiScissors className="text-primary text-2xl" />
-                <h3 className="text-3xl font-headline italic">Cutting & Styling</h3>
+                <h3 className="text-3xl font-headline italic">Corte y Peinado</h3>
               </div>
               <div className="space-y-10">
-                <ServiceItem title="The Editorial Cut" price="$145+" desc="Precision haircut including custom scalp massage and signature editorial blowout." />
-                <ServiceItem title="Signature Blowout" price="$85+" desc="High-volume, long-lasting styling using premium French botanical products." />
-                <ServiceItem title="Event Styling" price="$175+" desc="Up-dos, editorial waves, or bespoke avant-garde styling for special occasions." />
+                <ServiceItem title="El Corte Editorial" price="$145+" desc="Corte de precisión que incluye masaje capilar personalizado y secado editorial de autor." />
+                <ServiceItem title="Secado de Autor" price="$85+" desc="Peinado de alto volumen y larga duración utilizando productos botánicos franceses de primera calidad." />
+                <ServiceItem title="Peinado para Eventos" price="$175+" desc="Recogidos, ondas editoriales o peinado vanguardista a medida para ocasiones especiales." />
               </div>
             </div>
 
@@ -105,12 +105,12 @@ const Services = () => {
             <div className="space-y-12">
               <div className="border-b border-outline-variant/30 pb-6 flex items-center gap-4">
                 <FiZap className="text-primary text-2xl" />
-                <h3 className="text-3xl font-headline italic">Color Artistry</h3>
+                <h3 className="text-3xl font-headline italic">Arte del Color</h3>
               </div>
               <div className="space-y-10">
-                <ServiceItem title="Full Global Color" price="$195+" desc="Single process root-to-tip saturation using oil-based, ammonia-free formulas." />
-                <ServiceItem title="Full Multi-Tonal Lights" price="$280+" desc="Traditional foil technique for maximum brightness and dimension." />
-                <ServiceItem title="Color Correction" price="Consult" desc="Complex tonal shifts and restoration. Price determined upon expert consultation." />
+                <ServiceItem title="Color Global Completo" price="$195+" desc="Saturación de un solo proceso de la raíz a las puntas utilizando fórmulas sin amoníaco a base de aceite." />
+                <ServiceItem title="Luces Multi-tonales Completas" price="$280+" desc="Técnica tradicional de papel de aluminio para máxima luminosidad y dimensión." />
+                <ServiceItem title="Corrección de Color" price="Consulta" desc="Cambios tonales complejos y restauración. Precio determinado previa consulta experta." />
               </div>
             </div>
 
@@ -118,12 +118,12 @@ const Services = () => {
             <div className="space-y-12">
               <div className="border-b border-outline-variant/30 pb-6 flex items-center gap-4">
                 <FiStar className="text-primary text-2xl" />
-                <h3 className="text-3xl font-headline italic">Treatments & Rituals</h3>
+                <h3 className="text-3xl font-headline italic">Tratamientos y Rituales</h3>
               </div>
               <div className="space-y-10">
-                <ServiceItem title="Molecular Repair" price="$65+" desc="K12 peptide treatment to reverse damage from heat and chemical services." />
-                <ServiceItem title="Gloss & Shine" price="$95+" desc="Acidic bonding gloss to seal cuticles and provide mirror-like reflection." />
-                <ServiceItem title="Scalp Detox Ritual" price="$110+" desc="Exfoliating scrub followed by a nutrient-dense botanical clay masque." />
+                <ServiceItem title="Reparación Molecular" price="$65+" desc="Tratamiento de péptidos K12 para revertir el daño causado por el calor y los servicios químicos." />
+                <ServiceItem title="Brillo y Resplandor" price="$95+" desc="Brillo de unión ácida para sellar las cutículas y proporcionar un reflejo tipo espejo." />
+                <ServiceItem title="Ritual de Detox Capilar" price="$110+" desc="Exfoliación seguida de una mascarilla de arcilla botánica rica en nutrientes." />
               </div>
             </div>
 
@@ -131,7 +131,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Final CTA Section */}
+      {/* Final CTA Section 
       <section className="py-48 px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
@@ -149,7 +149,7 @@ const Services = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section>*/}
     </div>
   );
 };

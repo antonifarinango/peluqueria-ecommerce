@@ -30,7 +30,6 @@ const dispatch = useDispatch();
     });
 
     const saveProductHandler = (data) => {
-        console.log(data)
         if(!update) {
             // create new product logic
             const sendData = {
@@ -83,19 +82,19 @@ const dispatch = useDispatch();
             onSubmit={handleSubmit(saveProductHandler)}>
             <div className='flex md:flex-row flex-col gap-4 w-full'>
                 <InputField 
-                    label="Product Name"
+                    label="Nombre del Producto"
                     required
                     id="productName"
                     type="text"
-                    message="This field is required*"
+                    message="Este campo es obligatorio*"
                     register={register}
-                    placeholder="Product Name"
+                    placeholder="Nombre del Producto"
                     errors={errors}
                     />
 
                 {!update && (
                     <SelectTextField
-                        label="Select Categories"
+                        label="Seleccionar Categorías"
                         select={selectedCategory}
                         setSelect={setSelectedCategory}
                         lists={categories}
@@ -105,43 +104,43 @@ const dispatch = useDispatch();
 
             <div className='flex md:flex-row flex-col gap-4 w-full'>
                 <InputField 
-                    label="Price"
+                    label="Precio"
                     required
                     id="price"
                     type="number"
-                    message="This field is required*"
-                    placeholder="Product Price"
+                    message="Este campo es obligatorio*"
+                    placeholder="Precio del Producto"
                     register={register}
                     errors={errors}
                     />
 
                     <InputField 
-                    label="Quantity"
+                    label="Cantidad"
                     required
                     id="quantity"
                     type="number"
-                    message="This field is required*"
+                    message="Este campo es obligatorio*"
                     register={register}
-                    placeholder="Product Quantity"
+                    placeholder="Cantidad del Producto"
                     errors={errors}
                     />
             </div>
         <div className="flex md:flex-row flex-col gap-4 w-full">
           <InputField
-            label="Discount"
+            label="Descuento"
             id="discount"
             type="number"
-            message="This field is required*"
-            placeholder="Product Discount"
+            message="Este campo es obligatorio*"
+            placeholder="Descuento del Producto"
             register={register}
             errors={errors}
           />
           <InputField
-            label="Special Price"
+            label="Precio Especial"
             id="specialPrice"
             type="number"
-            message="This field is required*"
-            placeholder="Product Discount"
+            message="Este campo es obligatorio*"
+            placeholder="Descuento del Producto"
             register={register}
             errors={errors}
           />
@@ -150,18 +149,18 @@ const dispatch = useDispatch();
         <div className="flex flex-col gap-2 w-full">
             <label htmlFor='desc'
               className='font-semibold text-sm text-slate-800'>
-                Description
+                Descripción
             </label>
 
             <textarea
                 rows={5}
-                placeholder="Add product description...."
+                placeholder="Añadir descripción del producto...."
                 className={`px-4 py-2 w-full border outline-hidden bg-transparent text-slate-800 rounded-md ${
                     errors["description"]?.message ? "border-red-500" : "border-slate-700" 
                 }`}
                 maxLength={255}
                 {...register("description", {
-                    required: {value: true, message:"Description is required"},
+                    required: {value: true, message:"La descripción es obligatoria"},
                 })}
                 />
 
@@ -177,7 +176,7 @@ const dispatch = useDispatch();
                     onClick={() => setOpen(false)}
                     variant='outlined'
                     className='text-white py-[10px] px-4 text-sm font-medium'>
-                Cancel
+                Cancelar
             </Button>
 
             <Button
@@ -188,10 +187,10 @@ const dispatch = useDispatch();
                 className='bg-custom-blue text-white  py-[10px] px-4 text-sm font-medium'>
                 {loader ? (
                     <div className='flex gap-2 items-center'>
-                        <Spinners /> Loading...
+                        <Spinners /> Cargando...
                     </div>
                 ) : (
-                    "Save"
+                    "Guardar"
                 )}
             </Button>
         </div>

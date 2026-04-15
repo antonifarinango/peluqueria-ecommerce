@@ -15,11 +15,11 @@ const ProductCard = ({ ...item }) => {
 
     const addToCartHandler = (cartItem) => {
         if (!isAvailable) {
-            toast.error("Product is out of stock");
+            toast.error("El producto está agotado");
             return;
         }
         dispatch(addToCart(cartItem));
-        toast.success("Product added to cart");
+        toast.success("Producto añadido al carrito");
     };
 
     return (
@@ -43,7 +43,7 @@ const ProductCard = ({ ...item }) => {
                         <button 
                             onClick={() => setOpen(true)}
                             className="bg-surface/90 backdrop-blur-md text-primary p-3 rounded-full shadow-lg hover:bg-primary hover:text-on-primary transition-all duration-300 transform hover:scale-110"
-                            title="Quick View"
+                            title="Vista rápida"
                         >
                             <FiEye size={18} />
                         </button>
@@ -51,7 +51,7 @@ const ProductCard = ({ ...item }) => {
                             onClick={() => addToCartHandler(item)}
                             className="bg-surface/90 backdrop-blur-md text-primary p-3 rounded-full shadow-lg hover:bg-primary hover:text-on-primary transition-all duration-300 transform hover:scale-110"
                             disabled={!isAvailable}
-                            title="Add to Cart"
+                            title="Añadir al carrito"
                         >
                             <FiShoppingBag size={18} />
                         </button>
@@ -69,7 +69,7 @@ const ProductCard = ({ ...item }) => {
 
                 {!isAvailable && (
                     <div className="absolute inset-0 bg-background/60 backdrop-blur-[2px] flex items-center justify-center">
-                        <span className="bg-on-background text-background px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] rounded-full">Sold Out</span>
+                        <span className="bg-on-background text-background px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] rounded-full">Agotado</span>
                     </div>
                 )}
             </div>
@@ -92,7 +92,7 @@ const ProductCard = ({ ...item }) => {
             </div>
 
             <p className="text-secondary text-sm mb-6 leading-relaxed font-body line-clamp-2">
-                {description || "No description available for this curated item."}
+                {description || "No hay descripción disponible para este artículo curado."}
             </p>
 
             <div className="mt-auto flex flex-col gap-4">
@@ -102,7 +102,7 @@ const ProductCard = ({ ...item }) => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-[10px] font-label tracking-widest uppercase text-primary border-b border-transparent hover:border-primary transition-all pb-1 w-fit group/link"
                 >
-                    Order via WhatsApp
+                    Comprar por WhatsApp
                     <FiArrowRight size={12} className="group-hover/link:translate-x-1 transition-transform" />
                 </a>
             </div>

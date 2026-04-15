@@ -61,7 +61,6 @@ const OrderTable = ({ adminOrder, pagination }) => {
         try {
             addressData = await dispatch(getAddressesById(fullOrder.addressId));
         } catch (e) {
-            console.error("No se pudo cargar la direccion", e);
         }
     }
     
