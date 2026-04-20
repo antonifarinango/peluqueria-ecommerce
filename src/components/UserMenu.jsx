@@ -82,15 +82,16 @@ const UserMenu = () => {
             </MenuItem>
           </Link>)}
 
-        <MenuItem className="flex gap-2"
+   <MenuItem className="w-full"
           onClick={logOutHandler}>
-          <div className='font-semibold w-full bg-primary text-white flex gap-2 items-center px-4 py-1 rounded-lg'>
-            <IoExitOutline className='text-xl' />
-            <span className='font-bold text-[16px] mt-1'>
+            <div className='bg-danger w-full flex justify-center px-2 py-2 rounded-[10px] text-white cursor-pointer'>
+            <span className='font-bold text-[16px]'>
               Cerrar Sesión
             </span>
-          </div>
+            </div>
+            
         </MenuItem>
+       
 
       </Menu>
 

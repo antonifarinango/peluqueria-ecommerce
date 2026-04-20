@@ -7,9 +7,9 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row justify-between items-start px-8 gap-12 max-w-screen-2xl mx-auto">
         {/* Brand and Description */}
         <div className="flex flex-col gap-6 max-w-sm">
-          <div className="text-xl font-headline italic text-on-background">The Editorial Salon</div>
-          <p className="text-sm text-secondary leading-relaxed font-body">
-            Defining the contemporary standard of beauty through craftsmanship and quiet luxury. Join us for a curated experience.
+          <div className="text-xl font-headline italic text-on-background">Estilos Any Look</div>
+          <p className="text-[18px] text-secondary leading-relaxed font-body">
+            Todo lo que necesitas para cuidar tu imagen en un solo lugar.
           </p>
           <div className="flex gap-4">
             <a href="#" className="text-primary hover:text-on-background transition-colors p-2 bg-surface-container rounded-full">
@@ -28,50 +28,44 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-16">
           {/* Contact */}
           <div className="flex flex-col gap-4">
-            <h4 className="font-headline text-lg text-on-background">Contact</h4>
+            <h4 className="font-headline text-lg text-on-background">Contáctanos</h4>
             <nav className="flex flex-col gap-3 text-sm text-secondary font-body">
               <span className="flex items-center gap-2">
-                <FiMapPin className="text-primary text-xs" /> 1202 Madison Ave, NY
+                <FiMapPin className="text-primary text-xs" />De los Fundadores y Sebastián de Benalcázar
               </span>
               <span className="flex items-center gap-2">
                 <FiPhone className="text-primary text-xs" /> +1 (212) 555-0198
-              </span>
-              <span className="flex items-center gap-2 font-medium text-primary">
-                hello@editorialsalon.com
               </span>
             </nav>
           </div>
 
           {/* Hours */}
           <div className="flex flex-col gap-4">
-            <h4 className="font-headline text-lg text-on-background">Hours</h4>
+            <h4 className="font-headline text-lg text-on-background">Horario de atención</h4>
             <nav className="flex flex-col gap-3 text-sm text-secondary font-body">
-              <p>Mon - Fri: 10am - 8pm</p>
-              <p>Sat: 9am - 6pm</p>
-              <p>Sun: Closed</p>
+              <p>Lunes - Viernes: 9am - 7pm</p>
+              <p>Sábado: 9am - 5pm</p>
             </nav>
           </div>
-
-          {/* Legal */}
-          <div className="flex flex-col gap-4">
-            <h4 className="font-headline text-lg text-on-background">Legal</h4>
-            <nav className="flex flex-col gap-3 text-sm text-secondary font-body">
-              <Link to="/about" className="hover:text-primary transition-colors">Privacy Policy</Link>
-              <Link to="/about" className="hover:text-primary transition-colors">Terms of Service</Link>
-              <Link to="/about" className="hover:text-primary transition-colors">Accessibility</Link>
-            </nav>
+          <div className="flex">
+            <img src="../public/logo-web.png" alt="logo" className='md:h-30 md:w-70' />
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="mt-20 px-8 max-w-screen-2xl mx-auto pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-sm text-secondary font-body">© 2024 The Editorial Salon. All Rights Reserved.</p>
-        <div className="flex gap-8 text-xs uppercase tracking-widest font-bold text-secondary Manrope">
-          <a href="#" className="hover:text-primary transition-colors">Instagram</a>
-          <Link to="/about" className="hover:text-primary transition-colors">Privacy</Link>
-          <Link to="/about" className="hover:text-primary transition-colors">Terms</Link>
-        </div>
+        <p className="text-sm text-blue font-body">© 2026<a href="https://wa.me/593984053628?text=Hola,%20quiero%20una%20página%20web"
+          target="_blank"
+          rel="noopener noreferrer"
+          className='ml-5 text-blue'>
+            AF SOLUTIONS
+        </a>
+        </p>
+        {/**<div className="flex gap-8 text-xs uppercase tracking-widest font-bold text-secondary Manrope">
+          <Link href="/" className="hover:text-primary transition-colors">Instagram</Link>
+        </div> */}
+        
       </div>
     </footer>
   );

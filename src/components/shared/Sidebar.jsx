@@ -14,9 +14,8 @@ const Sidebar = ({isProfileLayout = false}) => {
     const sideBarLayout = isAdmin ? adminNavigation : sellerNavigation;
     
   return (
-    <div className='flex grow flex-col gap-y-7 overflow-y-auto bg-custom-gradient px-6 w-55 pb-4'>
-        <div className='flex h-16 shrink-0 gap-x-3 pt-2'>
-            <FaTachometerAlt className='h-8 w-8 text-indigo-500'/>
+    <div className='flex grow flex-col gap-y-7 overflow-y-auto bg-dashboard-blue px-6 w-55 pb-4'>
+        <div className='mt-6 flex justify-center align-center'>
             <h1 className='text-white text-xl font-bold'>
                 {isAdmin ? "Panel Admin" : "Panel Vendedor"}
             </h1>
@@ -31,8 +30,8 @@ const Sidebar = ({isProfileLayout = false}) => {
                                     to={item.href}
                                     className={classNames(
                                         pathName === item.href
-                                            ? "bg-custom-blue text-white"
-                                            : "text-gray-400 hover:bg-gray-800 hover:text-white",
+                                            ? "bg-blue text-white"
+                                            : "text-gray-400 hover:bg-on-blue hover:text-white",
                                         "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6"
                                     )}>
 

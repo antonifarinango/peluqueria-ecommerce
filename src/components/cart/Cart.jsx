@@ -164,7 +164,7 @@ Quedo atento a la confirmación 👍
 
     return (
         <div className="flex-1 flex justify-center py-8 lg:py-12 px-4 w-full">
-            <motion.div initial="hidden" animate="visible" variants={fadeIn} className="w-full max-w-[1100px] flex flex-col lg:flex-row gap-8">
+            <motion.div initial="hidden" animate="visible" variants={fadeIn} className="w-full max-w-[1100px] flex flex-col lg:flex-row gap-8 mt-[80px]">
                 {/* Left Hand Side: Cart Items */}
                 <div className="flex-1 flex flex-col gap-6">
                     <div className="flex flex-col gap-2">
@@ -189,7 +189,7 @@ Quedo atento a la confirmación 👍
 
                     <div className="flex items-center gap-4 p-4 rounded-xl bg-blue-50 border border-blue-100 dark:border-blue-800 mt-4">
                         <FiInfo size={20} className="text-blue-500" />
-                        <p className="text-slate-700  text-sm font-medium">Tu carrito está listo. Los impuestos y el envío se calcularán en el pago.</p>
+                        <p className="text-slate-700  text-sm font-medium">Tu carrito está listo. El costo de envío se calculará al confirmar tu dirección de entrega.</p>
                     </div>
                 </div>
 
@@ -229,7 +229,8 @@ Quedo atento a la confirmación 👍
                                 Checkout
                             </Link>*/}
                             <button
-                                className="w-full bg-banner-color3 hover:bg-banner-color5 text-white flex items-center justify-center gap-3 py-4 rounded-xl font-extrabold text-lg transition-all shadow-lg shadow-blue-200 dark:shadow-none"
+                                className="w-full bg-success
+                                cursor-pointer hover:bg-on-success text-white flex items-center justify-center gap-3 py-4 rounded-xl font-extrabold text-lg transition-all shadow-lg shadow-blue-200 dark:shadow-none"
                                 onClick={handleCheckout}
                             >
                                 <FaWhatsapp size={28} />
@@ -237,7 +238,8 @@ Quedo atento a la confirmación 👍
                             </button>
 
                             <Link
-                                className="w-full hover:bg-slate-200 text-black dark:hover:bg-slate-260 py-4 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2"
+                                className="w-full text-white
+                                bg-blue hover:bg-on-blue dark:hover:bg-slate-260 py-4 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2"
                                 to="/products"
                             >
                                 <MdArrowBack size={20} />

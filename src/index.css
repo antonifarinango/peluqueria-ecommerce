@@ -17,6 +17,12 @@
   --color-primary-container: #c5a059;
   --color-on-primary: #ffffff;
   --color-on-primary-container: #4e3700;
+  --color-danger:#dc3545;
+  --color-success:#2e9b56;
+  --color-on-success:#3fb66b;
+  --color-on-blue:#0d6efd;
+  --color-blue:#0b60df;
+  --color-dashboard-blue:#254f8d;
   
   --color-secondary: #5f5e5e;
   --color-secondary-container: #e2dfde;

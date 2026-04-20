@@ -71,10 +71,10 @@ const Category = () => {
 
   return (
     <div>
-      <div className="pt-6 pb-10 flex justify-end">
+      <div className="pt-6 pb-10 flex justify-end mt-8">
         <button
           onClick={() => setOpenModal(true)}
-          className="bg-custom-blue hover:bg-blue-800 text-white font-semibold py-2 px-4 flex items-center gap-2 rounded-md shadow-md transition-colors hover:text-slate-300 duration-300"
+          className="bg-blue hover:bg-on-blue text-white font-semibold py-2 px-4 flex items-center gap-2 rounded-md shadow-md transition-colors duration-300"
         >
           <FaThList className="text-xl" />
           Agregar Categoría

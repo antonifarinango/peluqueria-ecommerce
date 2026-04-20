@@ -4,7 +4,7 @@ import { RxCross1 } from 'react-icons/rx';
 function Modal({ open, setOpen, children, title = ""}) {
   return (
     <>
-      <Dialog open={open} onClose={() => setOpen(false)} className="relative z-10">
+      <Dialog open={open} onClose={() => setOpen(false)} className="relative z-50">
         <DialogBackdrop className="fixed inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-closed:opacity-0" />
         
         <div className="fixed inset-0 overflow-hidden">
@@ -14,8 +14,8 @@ function Modal({ open, setOpen, children, title = ""}) {
                         className='pointer-events-auto relative w-screen max-w-[800px] transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700'>
                             <div className='flex h-full flex-col overflow-y-scroll bg-white shadow-xl'>
                                 <div className='px-4 sm:px-6'>
-                                    <DialogTitle className='text-base font-semibold leading-6 text-gray-900'>
-                                        Panel Title
+                                    <DialogTitle className='text-base font-semibold leading-6 text-gray-900 mt-8'>
+                                        DashBoard
                                     </DialogTitle>
                                 </div>
 

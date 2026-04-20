@@ -95,7 +95,7 @@ const ImageUploadForm = ({ setOpen, product }) => {
                 type='submit'
                 variant='contained'
                 color='primary'
-                className='bg-custom-blue text-white  py-[10px] px-4 text-sm font-medium'>
+                className='bg-blue text-white  py-[10px] px-4 text-sm font-medium'>
                 {loader ? (
                     <div className='flex gap-2 items-center'>
                         <Spinners /> Loading...

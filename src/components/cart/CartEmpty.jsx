@@ -7,10 +7,10 @@ const CartEmpty = () => {
         <div className="flex flex-col items-center">
             <MdShoppingCart size={80} className="mb-4 text-slate-500"/>
             <div className="text-3xl font-bold text-slate-700">
-                Your cart is empty
+                Tu carrito esta vacío
             </div>
             <div className="text-lg text-slate-500 mt-2">
-                Add some products to get started
+                Agrega algunos productos para comenzar
             </div>
         </div>
         <div className="mt-6">
@@ -18,7 +18,7 @@ const CartEmpty = () => {
                 to="/products"
                 className="flex gap-2 items-center text-blue-500 hover:text-blue-600 transition">
                     <MdArrowBack size={24} />
-                    <span className="font-medium">Start Shopping</span>
+                    <span className="font-medium">Comenzar a comprar</span>
                 </Link>
         </div>
     </div>

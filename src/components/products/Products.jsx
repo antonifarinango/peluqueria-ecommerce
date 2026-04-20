@@ -19,7 +19,7 @@ const Products = () => {
     )
     const dispatch = useDispatch();
     const [searchParams, setSearchParams] = useSearchParams();
-    
+
     useProductFilter();
 
     useEffect(() => {
@@ -57,24 +57,30 @@ const Products = () => {
         <div className="bg-background pt-32 pb-20 selection:bg-primary-fixed selection:text-on-primary-fixed">
             {/* Shop Hero Header */}
             <section className="px-8 md:px-12 max-w-screen-2xl mx-auto mb-12">
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     className="flex flex-col gap-6"
                 >
-                    <span className="font-label uppercase tracking-[0.3em] text-primary font-bold text-xs">COLLECTIONS</span>
-                    <h1 className="font-headline text-5xl md:text-7xl text-on-surface">Archive & Apothecary</h1>
+                    <span className="font-label uppercase tracking-[0.3em] text-primary font-bold text-xs">
+                        PRODUCTOS
+                    </span>
+
+                    <h1 className="font-headline text-5xl md:text-7xl text-on-surface">
+                        Cuidado Natural & Belleza Real
+                    </h1>
+
                     <p className="text-secondary text-lg max-w-2xl font-body leading-relaxed italic opacity-80">
-                        A curated selection of professional formulas and editorial tools. Each product is vetted by our master stylists for performance and purity.
+                        Descubre nuestra selección de productos 100% naturales para el cuidado del cabello y la piel. Cada fórmula está pensada para ofrecer resultados visibles, respetando tu bienestar y resaltando tu belleza de forma auténtica.
                     </p>
                 </motion.div>
             </section>
 
             <div className="px-8 md:px-12 max-w-screen-2xl mx-auto">
                 {/* Horizontal Filter Bar */}
-                <Filter 
-                    categories={categories || []} 
+                <Filter
+                    categories={categories || []}
                     selectedCategory={selectedCategoryId}
                     onCategoryChange={handleCategoryChange}
                     searchTerm={searchTerm}
@@ -89,7 +95,7 @@ const Products = () => {
                         </div>
                     ) : errorMessage ? (
                         <div className="flex flex-col justify-center items-center h-[400px] text-on-surface bg-surface-container-low rounded-xl p-12 text-center border border-outline-variant/10 shadow-inner">
-                            <FaExclamationTriangle className="text-4xl mb-6 opacity-30 text-primary"/>
+                            <FaExclamationTriangle className="text-4xl mb-6 opacity-30 text-primary" />
                             <h3 className="text-xl font-headline mb-2">Something went wrong</h3>
                             <p className="text-secondary font-body">{errorMessage}</p>
                         </div>

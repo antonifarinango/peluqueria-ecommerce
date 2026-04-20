@@ -103,7 +103,7 @@ const ConfirmarOrden = () => {
             <button
                 onClick={handleConfirmOrder}
                 disabled={loading}
-                className="w-full bg-custom-blue hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 disabled:opacity-70"
+                className="w-full bg-blue hover:bg-on-bluetext-white font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 disabled:opacity-70"
             >
                 {loading ? (
                     <>

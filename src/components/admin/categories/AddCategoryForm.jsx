@@ -40,7 +40,7 @@ const AddCategoryForm = ({ setOpen, open, category, update = false }) => {
   }, [update, category]);
 
   return (
-    <div className="py-5 relative h-full ">
+    <div className="py-5 relative h-full">
       <form
         className="space-y-4 "
         onSubmit={handleSubmit(addNewCategoryHandler)}
@@ -70,7 +70,7 @@ const AddCategoryForm = ({ setOpen, open, category, update = false }) => {
           <button
             disabled={open}
             type="submit"
-            className={`rounded-[5px] bg-tertiary hover:bg-blue-800 text-white py-[10px] px-4 text-sm font-medium`}
+            className={`rounded-[5px] bg-blue hover:bg-on-blue text-white py-[10px] px-4 text-sm font-medium`}
           >
             {open ? "Cargando..." : update ? "Actualizar" : "Guardar"}
           </button>

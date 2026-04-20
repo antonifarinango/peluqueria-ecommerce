@@ -29,12 +29,13 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-surface/80 py-4 shadow-sm" : "bg-transparent py-6"}`}>
+        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-surface/90 py-3 shadow-sm" : "bg-transparent py-2"}`}>
             <div className="flex justify-between items-center px-8 md:px-12 max-w-screen-2xl mx-auto">
                 {/* Logo */}
-                <Link to="/" className="text-2xl font-headline italic text-zinc-900 tracking-tight">
-                    The Editorial Salon
+                <Link to="/" className="">
+                        <img src="../public/logo-web.png" alt="logo" className='w-40' />
                 </Link>
+
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex gap-12 items-center">
@@ -42,11 +43,10 @@ const Navbar = () => {
                         <Link
                             key={link.path}
                             to={link.path}
-                            className={`font-label font-semibold  text-xs tracking-widest uppercase transition-all duration-300 pb-1 border-b ${
-                                path === link.path 
-                                ? "text-primary border-primary" 
-                                : "text-black border-transparent hover:text-primary hover:border-primary/30"
-                            }`}
+                            className={`font-label font-semibold  text-xs tracking-widest uppercase transition-all duration-300 pb-1 border-b ${path === link.path
+                                    ? "text-primary border-primary"
+                                    : "text-black border-transparent hover:text-primary hover:border-primary/30"
+                                }`}
                         >
                             {link.name}
                         </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
                     )}
 
                     {/* Mobile Menu Toggle */}
-                    <button 
+                    <button
                         className="md:hidden text-primary transition-transform active:scale-90"
                         onClick={() => setNavbarOpen(!navbarOpen)}
                     >
@@ -109,9 +109,8 @@ const Navbar = () => {
                                 key={link.path}
                                 to={link.path}
                                 onClick={() => setNavbarOpen(false)}
-                                className={`text-xs tracking-[0.2em] font-bold uppercase transition-colors font-label ${
-                                    path === link.path ? "text-primary" : "text-secondary"
-                                }`}
+                                className={`text-xs tracking-[0.2em] font-bold uppercase transition-colors font-label ${path === link.path ? "text-primary" : "text-secondary"
+                                    }`}
                             >
                                 {link.name}
                             </Link>
@@ -120,19 +119,19 @@ const Navbar = () => {
 
                     <div className="mt-auto pt-8 border-t border-outline-variant/20">
                         <p className="text-[10px] uppercase tracking-widest text-outline font-label font-bold">
-                            The Editorial Salon © 2024
+                            Estilos Any Look
                         </p>
                     </div>
                 </div>
             </div>
-            
+
             {/* Mobile Backdrop */}
             {navbarOpen && (
-                <div 
+                <div
                     className="fixed inset-0 bg-on-background/20 backdrop-blur-sm z-40 md:hidden"
                     onClick={() => setNavbarOpen(false)}
                 />
-                
+
             )}
         </nav>
     );

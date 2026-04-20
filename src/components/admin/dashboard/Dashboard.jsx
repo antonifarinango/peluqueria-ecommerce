@@ -28,7 +28,7 @@ const Dashboard = () => {
   
   return (
     <div>
-      <div className='flex md:flex-row mt-8 flex-col lg:justify-between 
+      <div className='flex md:flex-row mt-20 flex-col lg:justify-between 
           border border-slate-400 rounded-lg bg-linear-to-r
            from-blue-50 to-blue-100 shadow-lg'>
             <DashboardOverview 

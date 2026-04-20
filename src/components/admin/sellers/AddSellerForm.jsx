@@ -76,7 +76,7 @@ const AddSellerForm = ({ setOpen }) => {
           <button
             disabled={loader}
             type="submit"
-            className={`font-metropolis rounded-[5px]  bg-custom-blue hover:bg-blue-800 text-white  py-[10px] px-4 text-sm font-medium`}
+            className={`font-metropolis rounded-[5px]  bg-blue hover:bg-on-blue text-white  py-[10px] px-4 text-sm font-medium`}
           >
             {loader ? (
               <div className="flex gap-2 items-center">

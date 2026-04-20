@@ -65,7 +65,7 @@ const LogIn = () => {
 
             <button
                 disabled={loader}
-                className="bg-button-gradient flex gap-2 items-center justify-center font-semibold text-white w-full py-2 hover:text-slate-400 transition-colors duration-100 rounded-xs my-3"
+                className="bg-primary flex gap-2 items-center justify-center font-semibold text-white w-full py-2 cursor-pointer hover:pointer transition-colors rounded-[5px] my-3"
                 type="submit">
                 {loader ? (
                     <>
