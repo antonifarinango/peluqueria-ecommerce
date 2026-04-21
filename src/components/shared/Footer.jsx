@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FiInstagram, FiMessageCircle, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
+import { IoLogoTiktok } from "react-icons/io5";
 
 export default function Footer() {
   return (
@@ -11,15 +12,10 @@ export default function Footer() {
           <p className="text-[18px] text-secondary leading-relaxed font-body">
             Todo lo que necesitas para cuidar tu imagen en un solo lugar.
           </p>
+          {/** */}
           <div className="flex gap-4">
-            <a href="#" className="text-primary hover:text-on-background transition-colors p-2 bg-surface-container rounded-full">
-              <FiInstagram size={18} />
-            </a>
-            <a href="#" className="text-primary hover:text-on-background transition-colors p-2 bg-surface-container rounded-full">
+            <a href="https://wa.me/593985143439?text=Hola,%20quiero%20reservar%20una%20cita." className="text-primary hover:text-on-background transition-colors p-2 bg-surface-container rounded-full">
               <FiMessageCircle size={18} />
-            </a>
-            <a href="#" className="text-primary hover:text-on-background transition-colors p-2 bg-surface-container rounded-full">
-              <FiMail size={18} />
             </a>
           </div>
         </div>
@@ -34,7 +30,7 @@ export default function Footer() {
                 <FiMapPin className="text-primary text-xs" />De los Fundadores y Sebastián de Benalcázar
               </span>
               <span className="flex items-center gap-2">
-                <FiPhone className="text-primary text-xs" /> +1 (212) 555-0198
+                <FiPhone className="text-primary text-xs" /> 0985143439
               </span>
             </nav>
           </div>

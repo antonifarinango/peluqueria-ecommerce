@@ -43,7 +43,7 @@ const Home = () => {
                         variants={fadeIn}
                         className="flex flex-col gap-8 items-start"
                     >
-                        <span className="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold">DESDE 2010</span>
+                        <span className="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold">DESDE 2014</span>
                         <h1 className="font-headline text-6xl md:text-7xl leading-[1.1] tracking-tight text-on-surface w-full">
                             Todo lo que necesitas para cuidar tu imagen en un solo lugar.
                         </h1>
@@ -141,10 +141,10 @@ const Home = () => {
                 <div className="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
                     <div className="relative">
                         <div className="aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden shadow-2xl rotate-[-2deg] transition-transform hover:rotate-0 duration-700">
-                            <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsYR0zun-mhOMLpOpmJ52g-FPgt2Czi03VrOrGkBhqyoxW5uuN418M-rWfNZTNtUGyKCIhS9ljbdutRpWQcJ4LJH7Q6K9kr2FQr94OmiB2XRbh9gX6OYSAHajvhFiXZig55WFJ-DKuC8V-uoO-Zap6GqMguVthiTHVBH46uQ07wa4YEHXQ2rWt7XgxIOOa1xWs10AXJQ7afYHJPIfR4O9OzSAGSKbWNDvAWTNWqSB3C6-8qDoN-iXKLgul2Dq_Ics1PxD-lk7Yxg6c" alt="Salon Interior" />
+                            <img className="w-full h-full object-cover" src="../public/inicio-2.jpg" alt="cuidado de la piel" />
                         </div>
-                        <div className="absolute -bottom-10 -right-10 w-2/3 aspect-square bg-white p-4 rounded-xl shadow-xl rotate-[3deg] hidden lg:block">
-                            <img className="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPHvd0F2tBkxttROyckyY60881wMz-JYN2gzwEyxXUV2O6XjzTehLoJCRdCH95nhHCekSRAk0mDvsTDmxhOcfKSLN6rtUoW9VmAN69RE67b8wbxyGwe6GOmIpIN9iaA0_5x6QoOzp5JD7JjEiOq_-Xnu5j9qP4PCdadkwivIw1jmL0D_cmLNoHWtCXgTECztx9TsQwOj3-oNylrXH4n2H451S3m13r2nPWZUyD5M9aHurAqIR8IuBdY5V3aYDburrJ5n5zKcmFOycD" alt="Stylist Working" />
+                        <div className="absolute -bottom-10 -right-10 w-2/3 aspect-square bg-white p-1 rounded-xl shadow-xl rotate-[3deg] hidden lg:block">
+                            <img className="w-full h-full object-cover rounded-lg" src="../public/productos-inicio.jpg" alt="Stylist Working" />
                         </div>
                     </div>
                     <div className="flex flex-col gap-8">

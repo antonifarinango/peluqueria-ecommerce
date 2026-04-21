@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FiMail, FiMapPin, FiPhone, FiScissors, FiStar, FiTriangle } from "react-icons/fi";
+import { IoLogoTiktok } from "react-icons/io5";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { useEffect } from 'react';
@@ -44,7 +45,7 @@ export default function About() {
             >
                 <div className="max-w-screen-2xl mx-auto flex flex-col md:flex-row gap-16 items-center">
                     <div className="md:w-1/2 flex flex-col gap-8">
-                        <span className="label-md uppercase tracking-[0.3em] text-primary font-bold text-xs">DESDE 2010</span>
+                        <span className="label-md uppercase tracking-[0.3em] text-primary font-bold text-xs">DESDE 2014</span>
                         <h1 className="font-headline text-5xl md:text-8xl text-on-surface leading-tight">Sobre Mí</h1>
                         <p className="text-secondary text-lg max-w-xl font-body leading-relaxed">
                             Soy una profesional apasionada por el cuidado y la estética del cabello. Trabajo con productos de alta calidad y me mantengo en constante actualización para ofrecerte lo mejor en cortes, coloración y tratamientos.
@@ -57,7 +58,7 @@ export default function About() {
                         <div className="aspect-[4/5] bg-surface-container-high rounded-sm overflow-hidden shadow-2xl skew-y-1 transition-transform hover:skew-y-0 duration-700">
                             <img
                                 className="w-full h-full object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPHvd0F2tBkxttROyckyY60881wMz-JYN2gzwEyxXUV2O6XjzTehLoJCRdCH95nhHCekSRAk0mDvsTDmxhOcfKSLN6rtUoW9VmAN69RE67b8wbxyGwe6GOmIpIN9iaA0_5x6QoOzp5JD7JjEiOq_-Xnu5j9qP4PCdadkwivIw1jmL0D_cmLNoHWtCXgTECztx9TsQwOj3-oNylrXH4n2H451S3m13r2nPWZUyD5M9aHurAqIR8IuBdY5V3aYDburrJ5n5zKcmFOycD"
+                                src="../public/sobreMi.jpg"
                                 alt="Studio Interior"
                             />
                         </div>
@@ -83,7 +84,7 @@ export default function About() {
                         </div>
 
                         <div>
-                            <h3 className="text-7xl font-bold text-white">5+</h3>
+                            <h3 className="text-7xl font-bold text-white">+10</h3>
                             <p className="text-lg text-gray-300">Años</p>
                         </div>
 
@@ -127,15 +128,17 @@ export default function About() {
                                     <p className="text-secondary font-body text-lg">0985143439</p>
                                 </div>
                             </div>
-                            <div className="flex gap-6 items-start">
+                            {/*  <div className="flex gap-6 items-start">
                                 <div className="bg-primary/10 p-4 rounded-full text-primary">
-                                    <FiMail size={24} />
+                                    <IoLogoTiktok size={24} />
                                 </div>
                                 <div>
                                     <h4 className="font-headline text-xl mb-2">TikTok</h4>
-                                    <p className="text-secondary font-body text-lg">hello@editorialsalon.com</p>
+                                    <p className="text-secondary font-body text-lg">0985143439</p>
                                 </div>
-                            </div>
+                            </div>*/}
+                           
+                            
                         </div>
                     </div>
 
