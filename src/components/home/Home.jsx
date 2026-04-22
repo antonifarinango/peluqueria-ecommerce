@@ -44,7 +44,7 @@ const Home = () => {
                         className="flex flex-col gap-8 items-start"
                     >
                         <span className="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold">DESDE 2014</span>
-                        <h1 className="font-headline text-6xl md:text-7xl leading-[1.1] tracking-tight text-on-surface w-full">
+                        <h1 className="font-headline text-5xl md:text-7xl leading-[1.1] tracking-tight text-on-surface w-full">
                             Todo lo que necesitas para cuidar tu imagen en un solo lugar.
                         </h1>
                         <p className="text-secondary text-lg leading-relaxed font-body col-span-1">
@@ -66,9 +66,9 @@ const Home = () => {
             {/* Specializations Section (Bento Grid) */}
             <section className="py-32 bg-surface">
                 <div className="max-w-screen-2xl mx-auto px-8">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-20 gap-8">
                         <div className="max-w-2xl">
-                            <h2 className="font-headline text-4xl md:text-5xl mb-6">¿ Por qué elegirnos ?</h2>
+                            <h2 className="font-headline text-3xl md:text-5xl mb-6">¿ Por qué elegirnos ?</h2>
                         </div>
                         <Link to="/services" className="text-primary font-medium flex items-center gap-2 border-b border-primary/20 pb-1 hover:border-primary transition-all font-label text-xs tracking-widest uppercase">
                             VER SERVICIOS <FiArrowRight size={14} />

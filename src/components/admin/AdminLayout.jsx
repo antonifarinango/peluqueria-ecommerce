@@ -49,9 +49,9 @@ const AdminLayout = () => {
             <button
                 type='button'
                 onClick={() => setSidebarOpen(true)}
-                className='-m-2.5 text-gray-700 xl:hidden p-4'>
+                className='fixed bottom-6 right-6 z-50 bg-dashboard-blue text-white xl:hidden p-4 rounded-full shadow-lg hover:scale-110 active:scale-95 transition-all duration-300'>
                     <span className='sr-only'> Open Sidebar</span>
-                    <FaBars className='text-slate-800 text-2xl'/>
+                    <FaBars className='text-2xl'/>
             </button>
 
             <main className=''>

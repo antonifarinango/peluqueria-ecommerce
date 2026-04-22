@@ -25,7 +25,7 @@ const Sellers = () => {
 
   return (
     <React.Fragment>
-      <div className="pt-6 pb-10 flex justify-end mt-8">
+      <div className="pt-6 pb-10 flex justify-end mt-14">
         <button
           onClick={() => setOpenModal(true)}
           className="bg-blue hover:bg-on-blue text-white font-semibold py-2 px-4 flex items-center gap-2 rounded-md shadow-md transition-colors duration-300"
