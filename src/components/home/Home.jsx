@@ -31,7 +31,7 @@ const Home = () => {
                 <div className="absolute inset-0 z-0">
                     <img
                         className="w-full h-full object-cover grayscale-[20%] contrast-[1.1]"
-                        src="../public/img-hero.png"
+                        src="/img-hero.png"
                         alt="Arte en cada fibra"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
@@ -120,7 +120,7 @@ const Home = () => {
                             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}
                             className="md:col-span-5 relative overflow-hidden rounded-xl  group"
                         >
-                            <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="../public/img-inicio.png" alt="Color Editorial" />
+                            <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="/img-inicio.png" alt="Color Editorial" />
                         </motion.div>
 
                         {/* Styling Block */}
@@ -129,7 +129,7 @@ const Home = () => {
                             className="md:col-span-3 text-on-primary rounded-xl flex flex-col justify-between group overflow-hidden"
                         >
                             <div className='h-[450px] hover:scale-110 transition-transform duration-1000 '>
-                                <img src="../public/img-peinado-inicio.jpg" alt="" />
+                                <img src="/img-peinado-inicio.jpg" alt="" />
                             </div>
                         </motion.div>
                     </div>
@@ -141,10 +141,10 @@ const Home = () => {
                 <div className="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
                     <div className="relative">
                         <div className="aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden shadow-2xl rotate-[-2deg] transition-transform hover:rotate-0 duration-700">
-                            <img className="w-full h-full object-cover" src="../public/inicio-2.jpg" alt="cuidado de la piel" />
+                            <img className="w-full h-full object-cover" src="/inicio-2.jpg" alt="cuidado de la piel" />
                         </div>
                         <div className="absolute -bottom-10 -right-10 w-2/3 aspect-square bg-white p-1 rounded-xl shadow-xl rotate-[3deg] hidden lg:block">
-                            <img className="w-full h-full object-cover rounded-lg" src="../public/productos-inicio.jpg" alt="Stylist Working" />
+                            <img className="w-full h-full object-cover rounded-lg" src="/productos-inicio.jpg" alt="Stylist Working" />
                         </div>
                     </div>
                     <div className="flex flex-col gap-8">

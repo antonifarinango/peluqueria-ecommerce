@@ -44,7 +44,7 @@ export default function Footer() {
             </nav>
           </div>
           <div className="flex">
-            <img src="../public/logo-web.png" alt="logo" className='md:h-30 md:w-70' />
+            <img src="/logo-web.png" alt="logo" className='md:h-30 md:w-70' />
           </div>
         </div>
       </div>

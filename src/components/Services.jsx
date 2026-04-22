@@ -43,7 +43,7 @@ const Services = () => {
               <img
                 className="w-full h-full object-cover"
                 
-                src="../public/servicios-1.jpg"
+                src="/servicios-1.jpg"
               />
             </motion.div>
           </div>
@@ -57,7 +57,7 @@ const Services = () => {
             <div className="aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden shadow-2xl group">
               <img
                 className="w-full h-full object-cover md:grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out transform group-hover:scale-105"
-                src="../public/img-servicios.png"
+                src="/img-servicios.png"
               />
             </div>
           </div>

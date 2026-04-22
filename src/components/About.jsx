@@ -58,7 +58,7 @@ export default function About() {
                         <div className="aspect-[4/5] bg-surface-container-high rounded-sm overflow-hidden shadow-2xl skew-y-1 transition-transform hover:skew-y-0 duration-700">
                             <img
                                 className="w-full h-full object-cover"
-                                src="../public/sobreMi.jpg"
+                                src="/sobreMi.jpg"
                                 alt="Studio Interior"
                             />
                         </div>
