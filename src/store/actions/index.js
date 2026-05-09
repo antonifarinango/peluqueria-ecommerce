@@ -132,6 +132,45 @@ export const authenticateSignInUser
         }
 } 
 
+export const authenticateGoogleUser 
+    = (googleToken, toast, navigate, setLoader, onPendingRegistration) => async (dispatch) => {
+        try {
+            setLoader(true);
+            const { data } = await api.post("/auth/google-verify", { token: googleToken });
+            
+            if (data.status === "SUCCESS") {
+                dispatch({ type: "LOGIN_USER", payload: data.userInfo });
+                localStorage.setItem("auth", JSON.stringify(data.userInfo));
+                toast.success("Inicio de sesión con Google exitoso");
+                navigate("/");
+            } else if (data.status === "PENDING_REGISTRATION") {
+                if (onPendingRegistration) {
+                    onPendingRegistration(data.email, data.name);
+                }
+            }
+        } catch (error) {
+            toast.error(error?.response?.data?.message || "Error al autenticar con Google");
+        } finally {
+            setLoader(false);
+        }
+};
+
+export const registerGoogleUser 
+    = (sendData, toast, navigate, setLoader) => async (dispatch) => {
+        try {
+            setLoader(true);
+            const { data } = await api.post("/auth/google-register", sendData);
+            dispatch({ type: "LOGIN_USER", payload: data });
+            localStorage.setItem("auth", JSON.stringify(data));
+            toast.success("¡Registro completado exitosamente!");
+            navigate("/");
+        } catch (error) {
+            toast.error(error?.response?.data?.message || "Error al registrar cuenta con Google");
+        } finally {
+            setLoader(false);
+        }
+};
+
 
 export const registerNewUser 
     = (sendData, toast, reset, navigate, setLoader) => async (dispatch) => {

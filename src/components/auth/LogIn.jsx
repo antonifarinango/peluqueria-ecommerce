@@ -4,7 +4,8 @@ import { AiOutlineLogin } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import InputField from "../shared/InputField";
 import { useDispatch } from "react-redux";
-import { authenticateSignInUser } from "../../store/actions";
+import { authenticateSignInUser, authenticateGoogleUser } from "../../store/actions";
+import { GoogleLogin } from "@react-oauth/google";
 import toast from "react-hot-toast";
 import Spinners from "../shared/Spinners";
 
@@ -28,17 +29,38 @@ const LogIn = () => {
     };
 
     return (
-        <div className="min-h-[calc(100vh-64px)] flex justify-center items-center">
+        <div className="min-h-[calc(100vh-64px)] flex justify-center items-center py-6">
             <form
                 onSubmit={handleSubmit(loginHandler)}
-                className="sm:w-[450px] w-[360px] shadow-custom py-8 sm:px-8 px-4 rounded-md">
+                className="sm:w-[450px] w-[360px] shadow-custom py-8 sm:px-8 px-4 rounded-md bg-white">
                     <div className="flex flex-col items-center justify-center space-y-4">
                         <AiOutlineLogin className="text-slate-800 text-5xl"/>
                         <h1 className="text-slate-800 text-center font-montserrat lg:text-3xl text-2xl font-bold">
                             Iniciar Sesión
                         </h1>
                     </div>
-            <hr className="mt-2 mb-5 text-black" />
+            <hr className="mt-2 mb-5 text-slate-200" />
+
+            {/* Botón de Google por encima de los campos tradicionales */}
+            <div className="flex flex-col items-center justify-center w-full mb-4">
+                <GoogleLogin
+                    onSuccess={(res) => {
+                        dispatch(authenticateGoogleUser(res.credential, toast, navigate, setLoader, (email, name) => {
+                            toast.success("¡Cuenta de Google válida! Completa tu registro.");
+                            navigate("/register", { state: { email, name, token: res.credential } });
+                        }));
+                    }}
+                    onError={() => toast.error("Error al autenticar con Google")}
+                    text="signin_with"
+                    shape="rectangular"
+                    width="100%"
+                />
+                <div className="flex items-center w-full my-4">
+                    <hr className="flex-grow border-slate-300" />
+                    <span className="px-3 text-slate-500 text-xs font-semibold whitespace-nowrap">O INGRESA CON TU CUENTA</span>
+                    <hr className="flex-grow border-slate-300" />
+                </div>
+            </div>
             <div className="flex flex-col gap-3">
                 <InputField
                     label="Nombre de usuario"
