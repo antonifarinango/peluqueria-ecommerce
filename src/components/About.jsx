@@ -128,7 +128,7 @@ export default function About() {
                                     <p className="text-secondary font-body text-lg">0985143439</p>
                                 </div>
                             </div>
-                            {/*  <div className="flex gap-6 items-start">
+                             {/*  <div className="flex gap-6 items-start">
                                 <div className="bg-primary/10 p-4 rounded-full text-primary">
                                     <IoLogoTiktok size={24} />
                                 </div>

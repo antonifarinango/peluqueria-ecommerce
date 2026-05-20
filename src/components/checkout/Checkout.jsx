@@ -22,7 +22,7 @@ const Checkout = () => {
         (state) => state.auth
     )
     //Para pagos con stripe
-    //const { paymentMethod } = useSelector((state) => state.payment);
+    const { paymentMethod } = useSelector((state) => state.payment);
 
     const { nombreUsuario, telefonoUsuario } = useSelector((state) => state.usuarios)
 
@@ -36,33 +36,23 @@ const Checkout = () => {
             return;
         }
 
-        /**  CONDICION PARA PAGOS CON STRIPE
         if (activeStep === 1 && (!selectedUserCheckoutAddress || !paymentMethod)) {
             toast.error("Please select payment address before proceeding.");
             return;
         }
-*/
-        if (activeStep === 1 && (!nombreUsuario || !telefonoUsuario)) {
-            toast.error("Por favor, selecciona una dirección de pago antes de continuar.");
-            return;
-        }
+
+        // if (activeStep === 1 && (!nombreUsuario || !telefonoUsuario)) {
+        //     toast.error("Por favor, selecciona una dirección de pago antes de continuar.");
+        //     return;
+        // }
         setActiveStep((prevStep) => prevStep + 1);
     };
 
-    /* 
-        const steps = [
-            "Address",
-            "Payment Method",
-            "Order Summary",
-            "Payment",
-        ];
-    */
-
     const steps = [
         "Dirección",
-        "Datos Usuario",
+        "Método de Pago",
         "Resumen de Orden",
-        "Confirmar Orden",
+        "Pago",
     ];
     useEffect(() => {
         dispatch(getUserAddresses());
@@ -84,39 +74,20 @@ const Checkout = () => {
                 </div>
             ) : (
                 <div className='mt-5'>
-                    {/*{activeStep === 0 && <AddressInfo address={address} />}
-                {activeStep === 1 && <PaymentMethod />}
-                {activeStep === 2 && <OrderSummary 
-                                        totalPrice={totalPrice}
-                                        cart={cart}
-                                        address={selectedUserCheckoutAddress}
-                                        paymentMethod={paymentMethod}/>}
-                {activeStep === 3 && 
-                    <>
-                        {paymentMethod === "Stripe" ? (
-                            <StripePayment />
-                        ) : (
-                            <PaypalPayment />
-                        )}
-                    </>} */}
                     {activeStep === 0 && <AddressInfo address={address} />}
-                    {activeStep === 1 && <AddUsuarioFormWhatssapp />}
+                    {activeStep === 1 && <PaymentMethod />}
                     {activeStep === 2 && <OrderSummary
                         totalPrice={totalPrice}
                         cart={cart}
-                        address={selectedUserCheckoutAddress} />}
+                        address={selectedUserCheckoutAddress}
+                        paymentMethod={paymentMethod} />}
                     {activeStep === 3 &&
                         <>
-                            {/* NECESARIO PARA IMPLEMENTAR STRIPE
                             {paymentMethod === "Stripe" ? (
                                 <StripePayment />
                             ) : (
                                 <PaypalPayment />
                             )}
-                            */}
-
-                            {/* PARA ORDENES SIN STRIPE */}
-                            <ConfirmarOrden />
                         </>}
                 </div>
             )}
@@ -132,11 +103,7 @@ const Checkout = () => {
                     Atrás
                 </Button>
 
-                {/* //METODO PARA PAGOS CON STRIPE 
-{activeStep !== steps.length - 1 && (
-
-
-
+                {activeStep !== steps.length - 1 && (
                     <button
                         disabled={
                             errorMessage || (
@@ -146,7 +113,7 @@ const Checkout = () => {
                                 )
                             )
                         }
-                        className={`bg-custom-blue font-semibold px-6 h-10 rounded-md text-white
+                        className={`bg-blue font-semibold px-6 h-10 rounded-md text-white
                        ${errorMessage ||
                                 (activeStep === 0 && !selectedUserCheckoutAddress) ||
                                 (activeStep === 1 && !paymentMethod)
@@ -154,36 +121,8 @@ const Checkout = () => {
                                 : ""
                             }`}
                         onClick={handleNext}>
-                        Proceed
-                    </button>
-
-                
-                )}*/}
-                {activeStep !== steps.length - 1 && (
-
-
-
-                    <button
-                        disabled={
-                            errorMessage || (
-                                (activeStep === 0 ? !selectedUserCheckoutAddress
-                                    : activeStep === 1 ? !nombreUsuario
-                                        : false
-                                )
-                            )
-                        }
-                        className={`bg-blue font-semibold px-6 h-10 rounded-md text-white
-                       ${errorMessage ||
-                                (activeStep === 0 && !selectedUserCheckoutAddress) ||
-                                (activeStep === 1 && !nombreUsuario)
-                                ? "opacity-60"
-                                : ""
-                            }`}
-                        onClick={handleNext}>
                         Continuar
                     </button>
-
-
                 )}
             </div>
 
