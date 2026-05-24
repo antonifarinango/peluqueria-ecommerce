@@ -1,4 +1,5 @@
 import api from "../../api/api"
+import axios from "axios"
 
 export const fetchProducts = (queryString) => async (dispatch) => {
     try {
@@ -362,6 +363,54 @@ export const stripePaymentConfirmation
             setErrorMesssage("Payment Failed. Please try again.");
         }
 };
+
+export const payphonePaymentConfirmation 
+    = (sendData, clientTransactionId, setErrorMesssage, setLoading, toast) => async (dispatch) => {
+        try {
+            setLoading(true);
+            
+            // 1. Confirmar la transacción directamente con Payphone
+            const confirmUrl = "https://paymentbox.payphonetodoesposible.com/api/confirm";
+            const headers = {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${import.meta.env.VITE_PAYPHONE_TOKEN}`
+            };
+            const body = {
+                id: parseInt(sendData.pgPaymentId),
+                clientTxId: clientTransactionId
+            };
+            
+            const payphoneConfirmResponse = await axios.post(confirmUrl, body, { headers });
+            
+            if (payphoneConfirmResponse.data && 
+                (payphoneConfirmResponse.data.transactionStatus === "Approved" || payphoneConfirmResponse.data.status === "Approved")
+            ) {
+                // 2. Registrar el pedido en nuestro propio backend
+                const response = await api.post("/order/users/payments/online", sendData);
+                if (response.data) {
+                    localStorage.removeItem("CHECKOUT_ADDRESS");
+                    localStorage.removeItem("cartItems");
+                    dispatch({ type: "REMOVE_CLIENT_SECRET_ADDRESS"});
+                    dispatch({ type: "CLEAR_CART"});
+                    dispatch({ type: "CLEAR_USUARIO"});
+                    toast.success("¡Pedido creado exitosamente!");
+                } else {
+                    setErrorMesssage("Error al registrar el pago en el servidor.");
+                }
+            } else {
+                setErrorMesssage("La transacción no fue aprobada o confirmada por Payphone.");
+            }
+        } catch (error) {
+            console.error("Error al confirmar el pago en Payphone:", error);
+            setErrorMesssage(
+                error?.response?.data?.message || 
+                "Error al confirmar la transacción con la pasarela de Payphone."
+            );
+        } finally {
+            setLoading(false);
+        }
+};
+
 
 export const analyticsAction = () => async (dispatch, getState) => {
         try {
